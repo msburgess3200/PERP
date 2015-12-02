@@ -47,10 +47,10 @@ function GM:Initialize ( )
 	self.ReservedSlots = 64;
 	self.Serious = true;
 	
-    SQL_INFO_1 = "localhost"; -- HOST
-	SQL_INFO_2 = "gmod_perp";
-	SQL_INFO_3 = "Doggie14";
-	SQL_INFO_4 = "gmod_perp";
+    SQL_INFO_1 = "localhost"; -- DB-HOST
+	SQL_INFO_2 = ""; -- DB-User
+	SQL_INFO_3 = "";  -- DB-Pass
+	SQL_INFO_4 = ""; -- DB-DBName
 
 	tmysql.initialize(SQL_INFO_1, SQL_INFO_2, SQL_INFO_3, SQL_INFO_4, 3306, 8, 8);
 
