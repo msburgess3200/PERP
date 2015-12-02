@@ -1,0 +1,17 @@
+%assmod%	->	D3luX Gaming Admin Mod
+
+%cl_time%	->	Client Side Time (12:34:32)
+%cl_date%	->	Client Side Date (23/Aug/2007)
+%cl_timedate%	->	Client Side Time & Date (12:34:32 23/Aug/2007)
+
+%sv_time%	->	Server Side Time
+%sv_date%	->	Server Side Date
+%sv_timedate%	->	Server Side Time & Date
+
+%hostname%	->	Server Host name
+
+%&<convar>%	->	Client side convar value
+%@<convar>%	->	Server side convar value
+
+%map%		->	Current map
+%gamemode%	->	Current gamemode

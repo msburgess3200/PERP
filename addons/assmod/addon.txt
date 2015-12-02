@@ -1,0 +1,15 @@
+"AddonInfo"
+{
+	"name"		"ASS"
+	"version"	"1"
+	"up_date"	"28th March 2011"
+	"author_name"	"rem"
+	"author_email"	""
+	"author_url"	""
+	
+	"info"		""
+	
+	"GCFRequires"
+	{
+	}
+}

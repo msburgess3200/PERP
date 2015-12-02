@@ -1,0 +1,41 @@
+-> Loaded Meth (Wet) [ID: 1]
+-> Loaded Marijuana [ID: 2]
+-> Loaded Bullet Casings [ID: 3]
+-> Loaded AK-47 [ID: 4]
+-> Loaded Pistol Ammo [ID: 5]
+-> Loaded Rifle Ammo [ID: 6]
+-> Loaded Buckshot [ID: 7]
+-> Loaded Uzi [ID: 8]
+-> Loaded Shotgun [ID: 9]
+-> Loaded Glock [ID: 10]
+-> Loaded Five-Seven [ID: 11]
+-> Loaded Desert Eagle [ID: 12]
+-> Loaded Molotov Cocktail [ID: 13]
+-> Loaded Car Bomb [ID: 14]
+-> Loaded Lock Pick [ID: 15]
+-> Loaded Wooden Fence [ID: 16]
+-> Loaded Office Chair [ID: 17]
+-> Loaded Thermometer [ID: 18]
+-> Loaded Lamp [ID: 19]
+-> Loaded Box o' Beer (Empty) [ID: 20]
+-> Loaded Box o' Beer (6 Beers) [ID: 21]
+-> Loaded Wooden Table [ID: 22]
+-> Loaded Round Wooden Table [ID: 23]
+-> Loaded Chest of Drawers [ID: 25]
+-> Loaded Chest of Drawers [ID: 26]
+-> Loaded Beside Drawer [ID: 27]
+-> Loaded Small Chest of Drawers [ID: 28]
+-> Loaded Fancy Shelf [ID: 29]
+-> Loaded Polished Table [ID: 30]
+-> Loaded Polished Drawers with Mirror [ID: 31]
+-> Loaded Rounded Coffee Table [ID: 32]
+-> Loaded Simplistic Table [ID: 33]
+-> Loaded Antique Gun Cabinet [ID: 34]
+-> Loaded Metal Detector [ID: 35]
+
+
+
+
+
+
+

@@ -1,0 +1,221 @@
+FID
+
+1  atv
+2  willard
+3  mini
+4  bmw
+5  golf
+6  speedo
+7  lincoln
+8  hakumai
+9  escalade
+10 ferarri
+11 hummer
+12 yankee
+13 shelby
+14 spyder
+15 corvette
+16 bentley
+17 lambo
+18 lotus
+19 MURC
+20 stallion
+21 skyline
+22 slamg 
+23 aston
+24 auditt
+25 bugatti
+26 chevelless
+27 galwardo
+28 cayenne
+29 porsche
+30 evo
+31 huntley
+32 mule
+33 oracle
+34 buffalo
+35 Vanquish
+36 diablo
+37 f50
+38 gt500
+39 rx8
+40 diamond
+41 bobcat
+42 cognes
+43 supra
+44 minivan
+45 banshee
+
+50 veyron
+
+
+
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U mus cop car
+
+
+skins
+
+0 white
+5 black
+6 red
+7 yellow
+8 green
+9 light blue
+10 dark blue
+11 purple
+12 orange
+13 gray
+14 brown
+
+
+Add---
+
+gt500...just vgui, diamond
+rx8.....just vgui, gold
+
+ferrari old, diamond
+ferrari new, diamond
+dodge ram, gold
+bmw m5, gold
+audi r8, diamond
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hak
+stallion
+oracle
+charger
+chevelle SS
+minivan
+huntly
+mule
+vanquish
+supra
+diablovt
+f50
+cayenne
+evo
+auditt
+skyline
+porsche
+aston
+gallardo
+mercedes
+bugatti
+
+
+
+
+
+bobcat
+diamond
+cognoscenti
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

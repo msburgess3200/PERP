@@ -1,0 +1,39 @@
+ID, Model, Cost, PaintCost
+
+1 (ATV)		(15k)	(2500)
+2 (Willard)	(35k)	(3000)
+3 (Mini Cooper)	(50k)	(3500)
+4 (BMW)		(60k)	(4000)
+5 (Golf GTI)	(65k)	(4500)
+6 (Speedo)	(65K)	(4500)
+7 (Lincoln MK4)	(65k)	(5000)
+8 (Hakumai)	(70k)	(4500)
+9 (Escalade)	(80k)	(5250)
+10 (Barchetta)	(85k)	(5500)
+11 (Hummer H2)	(95k)	(6000)
+12 (Yankee)	(100k)	(5000)
+13 (Shelby)	(105k)	(6500)
+14 (Spyder)	(115k)	(7000)
+15 (Corvette)	(125k)	(7500)
+16 (Bentley)	(135k)	(7750)
+17 (Lamborghini)(145k)	(8000)
+18 (Lotus)	(200k)	(8500)
+19 (Murcielago)	(350k)	(9000)
+20 (Stallion)	(300K)	(9500)
+
+31 (Huntley)	(95k)	(6250) 	 // VIP
+32 (Mule)	(110K)	(7000)	 // VIP
+33 (Oracle)	(160K)	(7000)	 //VIP
+34 (Buffalo)	(175k)	(8250)	 // VIP
+35 (Vanquish)	(300K)	(12,000) // VIP
+36 (Diablo)	(450k)	(11,000) // VIP
+37 (F50)	(1.2Mil)(15,000) // VIP
+
+50 (Veyron)	(2.2Mil)(20,000) // GOLD
+
+94 (reserved FBI slot)
+95 (Stretch Limo)(0)(0) // Govt Vehicle
+96 (Ambulance)(0)(0) // Govt Vehicle
+97 (SWAT Van)(0)(0) // Govt Vehicle
+98 (Fire Truck)(0)(0) // Govt Vehicle
+99 (Police Car)(0)(0) // Govt Vehicle

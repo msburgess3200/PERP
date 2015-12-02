@@ -1,0 +1,10 @@
+"perp"
+{
+	"base"		"base"
+	"title"		"PERP"
+    "name"      "CTSGaming.com PERP"
+	"maps"		"^rp_"
+	"menusystem"	"1"
+	
+	
+}

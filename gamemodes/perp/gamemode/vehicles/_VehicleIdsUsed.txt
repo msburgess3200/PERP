@@ -1,0 +1,55 @@
+VechicleID, Usage, Model, Cost, PaintCost
+
+a (used)(ATV)(15k)(2500)
+b (used)(Mini Cooper)(50k)(3500)
+c (used)(BMW)(60k)(4000)
+d (used)(Golf GTI)(65k)(4500)
+e (used)(Lincoln MK4)(65k)(5000)
+f (used)(Barchetta)(85k)(5500)
+g (used)(Hummer H2)(95k)(6000)
+h (used)(Shelby)(105k)(6500)
+i (used)(Spyder)(115k)(7000)
+j (used)(Corvette)(125k)(7500)
+k (used)(Lamborghini)(145k)(8000)
+l (used)(Lotus)(200k)(8500)
+m (used)(Murcielago)(350k)(9000)
+n (used)(Willard)(35k)(3000)
+o (used)(Escalade)(80k)(5250)
+p (used)(Bentley)(135k)(7750)
+q (used)(Yankee)(100k)(5000)
+r (used)(Buffalo)(175k)(8250) // VIP
+s (used)(Huntley)(95k)(6250) // VIP
+t (used)(Mule)(110K)(7000) // VIP
+u (reserved FBI slot)
+v (used)(Stretch Limo)(0)(0) // Govt Vehicle
+w (used)(Ambulance)(0)(0) // Govt Vehicle
+x (used)(SWAT Van)(0)(0) // Govt Vehicle
+y (used)(Fire Truck)(0)(0) // Govt Vehicle
+z (used)(Police Car)(0)(0) // Govt Vehicle
+
+A (used)(Veyron)(2.2Mil)(20,000) // GOLD
+B (used)(Ferrari F50)(1.2Mil)(15,000) // VIP
+C (used)(Lamborghini Diablo)(450k)(11,000) // VIP
+D (used)(Vanquish)(300K)(12,000) // VIP
+E (used)(Hakumai)(70k)(4500)
+F (used)(Stallion)(300K)(9500)
+G (used)(Speedo)(65K)(4500)
+H (used)(Oracle)(160K)(7000) //VIP
+I (unused)
+J (unused)
+K (unused)
+L (unused)
+M (unused)
+N (unused)
+O (unused)
+P (unused)
+Q (unused)
+R (unused)
+S (unused)
+T (unused)
+U (unused)
+V (unused)
+W (unused)
+X (unused)
+Y (unused)
+Z (unused)
