@@ -1,0 +1,16 @@
+// Owner - 6
+STEAM_0:1:00000000	6 //Somebody with Level 6 permissions 
+
+// Lead Admin - 11
+ 
+// Super Admin - 15
+
+// Admin - 13
+ 
+// Gold Member - 16
+ 
+// VIP - 17
+
+// Division Leader - 12
+
+// Diamond - 14
