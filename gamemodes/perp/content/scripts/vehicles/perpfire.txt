@@ -1,0 +1,268 @@
+// firetruck, created by TheDanishMaster in 03/04/12 19:00:16, using Vehicle Controller (VCMod).
+
+"Vehicle"
+{
+	"WheelsPerAxle"		"2"
+	"Body"
+	{
+		"CounterTorqueFactor"	"0"
+		"MassCenterOverride"	"0 0 20"
+		"MassOverride"			"15000"
+		"AddGravity"			"1.0"
+		"MaxAngularVelocity"	"40"
+	}
+	"Engine"
+	{
+		"horsepower"		"2050"
+		"maxrpm"		"2000"
+		"maxspeed"		"45"		// mph
+		"maxReverseSpeed"	"20"		// mph
+		"autotransmission"	"1"
+		"axleratio"		"4.56"
+		"gear"			"2.86"		// 1st gear
+		"gear"			"1.89"		// 2nd gear
+		"gear"			"1.37"		// 3rd gear
+		"gear"			"1.0"		// 4th gear
+		"gear"			"0.84"		// 5th gear
+		"shiftuprpm"		"1000"
+		"shiftdownrpm"		"500"
+	}
+	"Steering"
+	{
+		"degreesSlow"		"45"	// steering cone at zero to slow speed
+		"degreesFast"		"17"	// steering cone at fast speed to max speed
+		"degreesBoost"		"7"	// steering cone at max boost speed (blend toward this after max speed)
+		"steeringExponent"	"1.4"	// steering function is linear, then raised to this power to be slower at the beginning of the curve, faster at the end
+		"slowcarspeed"		"15"
+		"fastcarspeed"		"30"
+		"slowSteeringRate"	"4.0"		
+		"fastSteeringRate"	"2.0"
+		"steeringRestRateSlow"	"4.0"
+		"steeringRestRateFast"	"2.0"
+		"turnThrottleReduceSlow" "0.1"
+		"turnThrottleReduceFast" "1.5"
+		"brakeSteeringRateFactor"	"6"
+		"throttleSteeringRestRateFactor"	"2"
+		"boostSteeringRestRateFactor"	"1.7"
+		"boostSteeringRateFactor"	"1.7"
+
+		"powerSlideAccel"	"250"
+
+		"skidallowed"		"1"
+		"dustcloud"		"1"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"30"
+			"Mass"							"550"
+			"Inertia"						"2"
+			"Damping"						"0"
+			"RotDamping"					"0.2"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"slidingrubbertire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"60"
+			"SpringDamping"					"3.14"
+			"StabilizerConstant"			"0"
+			"SpringDampingCompression"		"4"
+			"MaxBodyForce"					"9999"
+		}
+		"TorqueFactor"						"0"
+		"BrakeFactor"						"0.6"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"30"
+			"Mass"							"600"
+			"Inertia"						"2"
+			"Damping"						"0"
+			"RotDamping"					"0.2"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"slidingrubbertire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"102"
+			"SpringDamping"					"0.2"
+			"StabilizerConstant"			"3.14"
+			"SpringDampingCompression"		"4"
+			"MaxBodyForce"					"9999"
+		}
+		"TorqueFactor"						"1.3"
+		"BrakeFactor"						"0.5"
+	}
+}
+
+"Vehicle_Sounds"
+{
+	"Gear"
+	{
+		"Max_Speed"				"0.05"
+		"Speed_Approach_Factor"	"1"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.2"
+		"Speed_Approach_Factor"	"0.07"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.5"
+		"Speed_Approach_Factor"	"0.07"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.65"
+		"Speed_Approach_Factor"	"0.035"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.8"
+		"Speed_Approach_Factor"	"0.015"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"2"
+		"Speed_Approach_Factor"	"0.03"
+	}
+	"State"
+	{
+		"Name"		"SS_START_IDLE"
+		"Sound"		"semi_engine_start"
+		"Min_Time"	"5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_0"
+		"Sound"		"semi_rev"
+		"Min_Time"	"0.75"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_1_RESUME"
+		"Sound"		"semi_firstgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_3_RESUME"
+		"Sound"		"semi_thirdgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_3"
+		"Sound"		"semi_thirdgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_2"
+		"Sound"		"semi_secondgear"
+		"Min_Time"	"1.25"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_1"
+		"Sound"		"semi_firstgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SHUTDOWN"
+		"Sound"		"semi_engine_stop"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_IDLE"
+		"Sound"		"semi_engine_idle"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_REVERSE"
+		"Sound"		"semi_reverse"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SHUTDOWN_WATER"
+		"Sound"		"semi_stall_in_water"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_4_RESUME"
+		"Sound"		"semi_fourthgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SLOWDOWN"
+		"Sound"		"semi_throttleoff_slowspeed"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_TURBO"
+		"Sound"		"semi_turbo_on"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_0_RESUME"
+		"Sound"		"semi_engine_idle"
+		"Min_Time"	"0.75"
+	}
+	"State"
+	{
+		"Name"		"SS_START_WATER"
+		"Sound"		"semi_start_in_water"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_2_RESUME"
+		"Sound"		"semi_secondgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_4"
+		"Sound"		"semi_fourthgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SLOWDOWN_HIGHSPEED"
+		"Sound"		"semi_throttleoff_fastspeed"
+		"Min_Time"	"0"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"350"
+		"Min_Speed_Change"	"250"
+		"Sound"				"atv_impact_medium"
+		"Gear_Limit"		"1"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"450"
+		"Min_Speed_Change"	"350"
+		"Sound"				"atv_impact_heavy"
+		"Gear_Limit"		"0"
+	}
+
+	"Skid_LowFriction"		"tdmtruck_skid_highfriction"
+	"Skid_NormalFriction"	"tdmtruck_skid_highfriction"
+	"Skid_HighFriction"		"tdmtruck_skid_highfriction"
+}

@@ -1,0 +1,252 @@
+// chargersrt8, created by TheDanishMaster in 11/01/11 18:20:48, using Vehicle Controller (VCMod).
+
+"Vehicle"
+{
+	"WheelsPerAxle"		"2"
+	"Body"
+	{
+		"CounterTorqueFactor"	"1.5"
+		"MassCenterOverride"	"0 0 10"
+		"MassOverride"			"1900"
+		"AddGravity"			"2"
+		"MaxAngularVelocity"	"300"
+	}
+	"Engine"
+	{
+		"HorsePower"			"460"
+		"MaxRPM"				"8000"
+		"MaxSpeed"				"146"
+		"MaxReverseSpeed"		"20"
+		"AutobrakeSpeedGain"	"1.1"
+		"AutobrakeSpeedFactor"	"3"
+		"Autotransmission"		"1"
+		"AxleRatio"				"5.3"
+		"Gear"					"4.16"
+
+		"ShiftUpRPM"			"6500"
+		"ShiftDownRPM"			"4500"
+	}
+	"Steering"
+	{
+		"DegreesSlow"						"40"
+		"DegreesFast"						"12"
+		"DegreesBoost"						"5"
+		"SteeringExponent"					"1.4"
+		"SlowCarSpeed"						"15"
+		"FastCarSpeed"						"35"
+		"SlowSteeringRate"					"3"
+		"FastSteeringRate"					"1.5"
+		"SteeringRestRateSlow"				"3.3"
+		"SteeringRestRateFast"				"1.8"
+		"TurnThrottleReduceSlow"			"0.2"
+		"TurnThrottleReduceFast"			"0.9"
+		"BrakeSteeringRateFactor"			"2"
+		"ThrottleSteeringRestRateFactor"	"2"
+		"BoostSteeringRestRateFactor"		"1.7"
+		"BoostSteeringRateFactor"			"1.7"
+
+		"PowerSlideAccel"					"250"
+
+		"SkidAllowed"						"1"
+		"DustCloud"							"0"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"		"16"
+			"Mass"			"125"
+			"Inertia"		"1.7"
+			"Damping"		"0.1"
+			"RotDamping"	"0.4"
+			"Material"		"jeeptire"
+			"SkidMaterial"	"slidingrubbertire"
+			"BrakeMaterial"	"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"			"170"
+			"SpringDamping"				"0.3"
+			"StabilizerConstant"		"10"
+			"SpringDampingCompression"	"4"
+			"MaxBodyForce"				"20"
+		}
+		"TorqueFactor"						"0.6"
+		"BrakeFactor"						"0.8"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"		"16"
+			"Mass"			"125"
+			"Inertia"		"1.7"
+			"Damping"		"0.1"
+			"RotDamping"	"0.4"
+			"Material"		"jeeptire"
+			"SkidMaterial"	"slidingrubbertire"
+			"BrakeMaterial"	"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"			"170"
+			"SpringDamping"				"0.1"
+			"SpringDampingCompression"	"3"
+			"MaxBodyForce"				"30"
+		}
+		"TorqueFactor"						"1.6"
+		"BrakeFactor"						"0.8"
+	}
+}
+
+"Vehicle_Sounds"
+{
+	"Gear"
+	{
+		"Max_Speed"				"0.05"
+		"Speed_Approach_Factor"	"1"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.36"
+		"Speed_Approach_Factor"	"0.07"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.66"
+		"Speed_Approach_Factor"	"0.07"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.72"
+		"Speed_Approach_Factor"	"0.035"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"1"
+		"Speed_Approach_Factor"	"0.015"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"2"
+		"Speed_Approach_Factor"	"0.03"
+	}
+	"State"
+	{
+		"Name"		"ss_start_idle"
+		"Sound"		"vehicles\tdmcars\chargersrt8\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0"
+		"Sound"		"vehicles\tdmcars\chargersrt8\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1_resume"
+		"Sound"		"vehicles\tdmcars\chargersrt8\first.mp3"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3_resume"
+		"Sound"		"vehicles\tdmcars\chargersrt8\third.mp3"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3"
+		"Sound"		"vehicles\tdmcars\chargersrt8\third.mp3"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2"
+		"Sound"		"vehicles\tdmcars\chargersrt8\second.mp3"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1"
+		"Sound"		"vehicles\tdmcars\chargersrt8\first.mp3"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown"
+		"Sound"		"vehicles\tdmcars\chevelless\stop.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_idle"
+		"Sound"		"vehicles\tdmcars\chargersrt8\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_reverse"
+		"Sound"		"vehicles\tdmcars\chargersrt8\rev.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2_resume"
+		"Sound"		"vehicles\tdmcars\chargersrt8\second.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4_resume"
+		"Sound"		"vehicles\tdmcars\chargersrt8\fourth_cruise.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_turbo"
+		"Sound"		"atv_turbo_on"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown"
+		"Sound"		"vehicles\tdmcars\chargersrt8\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_start_water"
+		"Sound"		"atv_start_in_water"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0_resume"
+		"Sound"		"vehicles\tdmcars\chargersrt8\first.mp3"
+		"Min_Time"	"0.75"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown_water"
+		"Sound"		"atv_stall_in_water"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4"
+		"Sound"		"vehicles\tdmcars\chargersrt8\fourth_cruise.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown_highspeed"
+		"Sound"		"vehicles\tdmcars\chargersrt8\throttle_off.wav"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"350"
+		"Min_Speed_Change"	"250"
+		"Sound"				"atv_impact_medium"
+		"Gear_Limit"		"1"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"450"
+		"Min_Speed_Change"	"350"
+		"Sound"				"atv_impact_heavy"
+	}
+
+	"Skid_LowFriction"		"atv_skid_highfriction"
+	"Skid_NormalFriction"	"atv_skid_highfriction"
+	"Skid_HighFriction"		"atv_skid_highfriction"
+}

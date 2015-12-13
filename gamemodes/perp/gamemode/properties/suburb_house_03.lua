@@ -20,7 +20,7 @@ PROPERTY.Doors = 	{
 						{Vector(4759, 13817, 144), 'models/props_c17/door01_left.mdl'},
 						{Vector(5171, 13753, 144), 'models/props_c17/door01_left.mdl'},
 						{Vector(5274, 13872, 144), 'models/props_c17/door01_left.mdl'},
-						{Vector(5374, 13624, 119.5), '*13'},
+						{Vector(5374, 13624, 119.5), '*13'}
 					};
 					
 GAMEMODE:RegisterProperty(PROPERTY);

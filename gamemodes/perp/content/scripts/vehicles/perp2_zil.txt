@@ -1,0 +1,216 @@
+// This is the Zil Shitbox
+"vehicle"
+{
+	"wheelsperaxle"	"2"
+	"body"
+	{
+		"countertorquefactor"	"1.5"
+		"massCenterOverride"	"0 -4 0"
+		"massoverride"		"10500"		// kg
+		"addgravity"		"1.0"
+	}
+	"engine"
+	{
+		"horsepower"		"1350"
+		"maxrpm"		"3000"
+		"maxspeed"		"55"		// mph
+		"maxReverseSpeed"	"25"		// mph
+		"autotransmission"	"1"
+		"axleratio"		"4.56"
+		"gear"			"5.0"		// 1st gear
+		"gear"			"3.89"		// 2nd gear
+		"gear"			"2.17"		// 3rd gear
+		"gear"			"1.5"		// 4th gear
+		"gear"			"0.99"		// 5th gear
+		"shiftuprpm"		"2500"
+		"shiftdownrpm"		"1300"
+	
+		"boost"
+		{
+//			"force"		"1.2"	// 1.5 car body mass * gravity * inches / second ^ 2
+			"duration"	"1.0"	// 1 second of boost
+			"delay"		"10"	// 15 seconds before you can use it again
+			"torqueboost"	"1"	// enable "sprint" mode of vehicle, not	force type booster			
+			"maxspeed"	"65"	// maximum turbo speed
+			"force"		"1.5"	// use for value as a boost factor
+		}
+	}
+	"steering"
+	{
+		"degreesSlow"		"45"	// steering cone at zero to slow speed
+		"degreesFast"		"14"	// steering cone at fast speed to max speed
+		"degreesBoost"		"12"	// steering cone at max boost speed (blend toward this after max speed)
+		"steeringExponent"	"1.4"	// steering function is linear, then raised to this power to be slower at the beginning of the curve, faster at the end
+		"slowcarspeed"		"15"
+		"fastcarspeed"		"30"
+		"slowSteeringRate"	"4.0"		
+		"fastSteeringRate"	"2.0"
+		"steeringRestRateSlow"	"4.0"
+		"steeringRestRateFast"	"2.0"
+		"turnThrottleReduceSlow" "0.5"
+		"turnThrottleReduceFast" "0.90"
+		"brakeSteeringRateFactor"	"6"
+		"throttleSteeringRestRateFactor"	"2"
+		"boostSteeringRestRateFactor"	"1.7"
+		"boostSteeringRateFactor"	"1.7"
+
+		"powerSlideAccel"	"250"
+
+		"skidallowed"		"1"
+		"dustcloud"		"1"
+
+	}
+
+	// front axle
+	"axle"
+	{
+		"wheel"
+		{
+			"radius"	"23.5"
+			"mass"		"550"
+			"inertia"	"0.5"		// steady the car (fixes the oscillation of the axles about z)
+			"damping"	"0"
+			"rotdamping"	"0.5"
+			"material"	"ubertire"
+			"skidmaterial"	"slidingrubbertire"
+			"brakematerial" "brakingrubbertire"
+		}
+		"suspension"
+		{
+			"springConstant"		"140"
+			"springDamping"			"3.14"
+			"stabilizerConstant"		"180"
+			"springDampingCompression"	"4"
+			"maxBodyForce"			"9950"
+		}
+
+		"torquefactor"	"0.0"
+		"brakefactor"	"0.7"
+	}
+
+	// rear axle
+	"axle"
+	{
+		"wheel"
+		{
+			"radius"	"23.5"
+			"mass"		"550"
+			"inertia"	"0.5"		// steady the car (fixes the oscillation of the axles about z)
+			"damping"	"0"
+			"rotdamping"	"0.0"
+			"material"	"ubertire"
+			"skidmaterial"	"slidingrubbertire"
+			"brakematerial" "brakingrubbertire"
+		}
+		"suspension"
+		{
+			"springConstant"		"140"
+			"springDamping"			"3.14"
+			"stabilizerConstant"		"180"
+			"springDampingCompression"	"4"
+			"maxBodyForce"			"9950"
+		}
+		"torquefactor"	"1.5"
+		"brakefactor"	"0.3"
+	}
+}
+
+"vehicle_sounds"
+{
+	// List gears in order from lowest speed to highest speed
+
+	"gear"
+	{
+		"max_speed"		"0.6"
+		"speed_approach_factor"	"0.1"
+	}
+	"gear"
+	{
+		"max_speed"		"1.0"
+		"speed_approach_factor"	"0.1"
+	}
+	"state"
+	{
+		"name"		"SS_START_IDLE"
+		"sound"		"LT_start"
+		"min_time"	"1.6"
+	}
+	"state"
+	{
+		"name"		"SS_IDLE"
+		"sound"		"LT_idle"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_SHUTDOWN"
+		"sound"		"LT_shutdown"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_SHUTDOWN_WATER"
+		"sound"		"ATV_stall_in_water"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_REVERSE"
+		"sound"		"LT_reverse"
+		"min_time"	"0.7"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_0"
+		"sound"		"LT_throttle_1st"
+		"min_time"	"0.7"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_0_RESUME"
+		"sound"		"LT_throttle_1st"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_1"
+		"sound"		"LT_throttle_2nd"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_1_RESUME"
+		"sound"		"LT_throttle_2nd"
+		"min_time"	"0.7"
+	}
+	"state"
+	{
+		"name"		"SS_SLOWDOWN_HIGHSPEED"
+		"sound"		"LT_slowdown"
+		"min_time"	"0.25"
+	}
+	"state"
+	{
+		"name"		"SS_SLOWDOWN"
+		"sound"		"LT_slowdown"
+		"min_time"	"0.25"
+	}
+	"crashsound"
+	{
+		"min_speed"			"350"
+		"min_speed_change"	"250"
+		"sound"				"ATV_impact_medium"
+		"gear_limit"		"1"
+	}
+	"crashsound"
+	{
+		"min_speed"			"450"
+		"min_speed_change"	"350"
+		"sound"				"ATV_impact_heavy"
+	}
+
+	
+	"skid_lowfriction"		"ATV_skid_lowfriction"
+	"skid_normalfriction"	"ATV_skid_normalfriction"
+	"skid_highfriction"		"ATV_skid_highfriction"
+}

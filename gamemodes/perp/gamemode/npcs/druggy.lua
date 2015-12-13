@@ -13,7 +13,7 @@ NPC.Location = Vector( -9377.741211, -9595.868164, 74.0313);
 NPC.Angles = Angle(0, 130, 0);
 NPC.ShowChatBubble = "Normal";
 
-NPC.Sequence = 8;
+NPC.Sequence = 228;
 
 // This is always local player.
 function NPC.OnTalk ( )

@@ -1,7 +1,7 @@
 "perp"
 {
 	"base"		"base"
-	"title"		"PERP"
+	"title"		"Grand Theft Auto Online"
     "name"      "CTSGaming.com PERP"
 	"maps"		"^rp_"
 	"menusystem"	"1"

@@ -1,0 +1,280 @@
+// This is the Lotus Elise
+
+"vehicle"
+{
+	"wheelsperaxle"	"2"
+	"body"
+	{
+		"countertorquefactor"	"0.0"
+		"massCenterOverride"	"0 0 0"
+		"massoverride"		"1200"		// kg
+		"addgravity"		"1"
+	}
+	"engine"
+	{
+		"horsepower"		"850"
+		"maxrpm"		"3500"
+		"maxspeed"		"90"		// mph
+		"maxReverseSpeed"	"20"		// mph
+		"autotransmission"	"1"
+		"axleratio"		"3.00"
+		"gear"			"2.5"		// 1st gear
+		"gear"			"1.59"		// 2nd gear
+		"gear"			"1.17"		// 3rd gear
+		"gear"			"1.0"		// 4th gear
+		"gear"			"0.24"		// 5th gear
+		"shiftuprpm"		"1500"
+		"shiftdownrpm"		"300"
+	
+		//"boost"
+		//{
+//			"force"		"1.2"	// 1.5 car body mass * gravity * inches / second ^ 2
+		//	"duration"	"1.0"	// 1 second of boost
+		//	"delay"		"15"	// 15 seconds before you can use it again
+		//	"torqueboost"	"8"	// enable "sprint" mode of vehicle, not	force type booster			
+		//	"maxspeed"	"155"	// maximum turbo speed
+		//	"force"		"1.2"	// use for value as a boost factor
+		//}
+	}
+	"steering"
+	{
+		"degreesSlow"		"25"	// steering cone at zero to slow speed
+		"degreesFast"		"10"	// steering cone at fast speed to max speed
+		"degreesBoost"		"5"	// steering cone at max boost speed (blend toward this after max speed)
+		"steeringExponent"	"1.4"	// steering function is linear, then raised to this power to be slower at the beginning of the curve, faster at the end
+		"slowcarspeed"		"15"
+		"fastcarspeed"		"40"
+		"slowSteeringRate"	"4.0"		
+		"fastSteeringRate"	"2.0"
+		"steeringRestRateSlow"	"4.0"
+		"steeringRestRateFast"	"2.0"
+		"turnThrottleReduceSlow" "0.5"
+		"turnThrottleReduceFast" "1"
+		"brakeSteeringRateFactor"	"6"
+		"throttleSteeringRestRateFactor"	"2"
+		"boostSteeringRestRateFactor"	"1.7"
+		"boostSteeringRateFactor"	"1.7"
+
+		"powerSlideAccel"	"250"
+
+		"skidallowed"		"1"
+		"dustcloud"		"0"
+
+	}
+	
+	// front axle
+	"axle"
+	{
+		"wheel"
+		{
+			"radius"	"13.5"
+			"mass"		"100"
+			"inertia"	"0.5"		// steady the car (fixes the oscillation of the axles about z)
+			"damping"	"0"
+			"rotdamping"	"0.0"
+			"material"	"jeeptire"
+			"skidmaterial"	"slidingrubbertire"
+			"brakematerial" "brakingrubbertire"
+		}
+		"suspension"
+		{
+			"springConstant"		"80"
+			"springDamping"			"4"
+			"stabilizerConstant"		"10"
+			"springDampingCompression"	"2"
+			"maxBodyForce"			"250"
+		}
+
+		"torquefactor"	"0.0"
+		"brakefactor"	"0.0"
+	}
+
+	// rear axle
+	"axle"
+	{
+		"wheel"
+		{
+			"radius"	"14.5"
+			"mass"		"100"
+			"inertia"	"1.5"		// steady the car (fixes the oscillation of the axles about z)
+			"damping"	"0"
+			"rotdamping"	"0.0"
+			"material"	"jeeptire"
+			"skidmaterial"	"slidingrubbertire"
+			"brakematerial" "brakingrubbertire"
+		}
+		"suspension"
+		{
+			"springConstant"		"80"
+			"springDamping"			"4"
+			"stabilizerConstant"		"10"
+			"springDampingCompression"	"2"
+			"maxBodyForce"			"550"
+		}
+		"torquefactor"	"1.0"
+		"brakefactor"	"0.5"
+	}
+}
+
+"vehicle_sounds"
+{
+	// List gears in order from lowest speed to highest speed
+
+	"gear"
+	{
+		"max_speed"		"0.3"
+		"speed_approach_factor" "1.0"
+	}
+
+	"gear"
+	{
+		"max_speed"		"0.5"
+		"speed_approach_factor" "0.8"
+	}
+	"gear"
+	{
+		"max_speed"		"0.75"
+		"speed_approach_factor" "0.6"
+	}
+	"gear"
+	{
+		"max_speed"		"0.80"
+		"speed_approach_factor" "0.55"
+	}
+	"gear"
+	{
+		"max_speed"		"0.90"
+		"speed_approach_factor" "0.45"
+	}
+	"gear"
+	{
+		"max_speed"		"1.0"
+		"speed_approach_factor" "0.28"
+	}
+	"state"
+	{
+		"name"		"SS_START_WATER"
+		"sound"		"enzo_start_in_water"
+	}
+
+	"state"
+	{
+		"name"		"SS_START_IDLE"
+		"sound"		"enzo_engine_start"
+	}
+	"state"
+	{
+		"name"		"SS_SHUTDOWN_WATER"
+		"sound"		"enzo_stall_in_water"
+	}
+	"state"
+	{
+		"name"		"SS_IDLE"
+		"sound"		"enzo_engine_idle"
+	}
+	"state"
+	{
+		"name"		"SS_REVERSE"
+		"sound"		"enzo_reverse"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_0"
+		"sound"		"enzo_rev"
+		"min_time"	"0.75"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_0_RESUME"
+		"sound"		"enzo_engine_idle"
+		"min_time"	"0.75"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_1"
+		"sound"		"enzo_firstgear"
+		"min_time"	"0.20"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_1_RESUME"
+		"sound"		"enzo_firstgear_noshift"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_2"
+		"sound"		"enzo_secondgear"
+		"min_time"	"0.20"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_2_RESUME"
+		"sound"		"enzo_secondgear_noshift"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_3"
+		"sound"		"enzo_thirdgear"
+		"min_time"	"0.25"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_3_RESUME"
+		"sound"		"enzo_thirdgear_noshift"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_4"
+		"sound"		"enzo_fourthgear"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_GEAR_4_RESUME"
+		"sound"		"enzo_fourthgear_noshift"
+		"min_time"	"0.5"
+	}
+	"state"
+	{
+		"name"		"SS_SLOWDOWN_HIGHSPEED"
+		"sound"		"enzo_throttleoff_fastspeed"
+	}
+	"state"
+	{
+		"name"		"SS_SLOWDOWN"
+		"sound"		"enzo_throttleoff_slowspeed"
+	}
+	"state"
+	{
+		"name"		"SS_TURBO"
+		"sound"		"enzo_turbo_on"
+		"min_time"	"1.5"
+	}
+	"state"
+	{
+		"name"		"SS_SHUTDOWN"
+		"sound"		"enzo_engine_stop"
+	}
+	"crashsound"
+	{
+		"min_speed"			"350"
+		"min_speed_change"	"250"
+		"sound"				"ATV_impact_medium"
+		"gear_limit"		"1"
+	}
+	"crashsound"
+	{
+		"min_speed"			"450"
+		"min_speed_change"	"350"
+		"sound"				"ATV_impact_heavy"
+	}
+
+	
+	"skid_lowfriction"		"ATV_skid_lowfriction"
+	"skid_normalfriction"	"ATV_skid_normalfriction"
+	"skid_highfriction"		"ATV_skid_highfriction"
+}

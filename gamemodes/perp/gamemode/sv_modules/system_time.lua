@@ -211,7 +211,8 @@ hook.Add("InitPostEntity", "setupTime", setupTime);
 function GM.progressTime ( )
 	GAMEMODE.calculateWeather();
 	if !GAMEMODE.CurrentTime then GAMEMODE.CurrentTime = NOON end
-	local ourTable = GAMEMODE.manipulateLightTable(table.Copy(lightTable[GAMEMODE.CurrentTime]));
+	local ourTable = {};
+    local ourTable = GAMEMODE.manipulateLightTable(table.Copy(lightTable[GAMEMODE.CurrentTime]));
 	
 	if (GAMEMODE.CurrentTime == DAWN_START) then
 		if (math.random(1, 40) == 1) then

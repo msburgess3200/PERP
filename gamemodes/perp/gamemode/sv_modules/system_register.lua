@@ -1,6 +1,6 @@
+--[[
 
 
-/*
 local SetRank = 6;
 function GM.PlayerRegistration ( Player, Cmd, Args )
 	
@@ -201,5 +201,4 @@ function GM.PlayerRegistration ( Player, Cmd, Args )
 		end);
 	end);
 end
-concommand.Add('pe_mang', GM.PlayerRegistration);
-*/
+concommand.Add('pe_mang', GM.PlayerRegistration);]]--

@@ -1,0 +1,270 @@
+    "vehicle"
+    {
+            "wheelsperaxle" "2"
+            "body"
+            {
+                    "countertorquefactor"   "0.5"
+                    "massCenterOverride"    "0 0 0"
+                    "massoverride"                  "2548"          // kg
+                    "addgravity"                    "1.5"
+                    "maxAngularVelocity"    "720"
+            }
+            "engine"
+            {
+                    "horsepower"            "510"
+                    "maxrpm"                "5600"
+                    "maxspeed"              "147"           // mph
+                    "maxReverseSpeed"       "25"            // mph
+                    "autobrakeSpeedGain"    "1.1"           // 10% speed gain while coasting, put on the brakes after that
+                    "autobrakeSpeedFactor"  "3"             // Brake is this times the speed gain
+                    "autotransmission"      "1"
+                    "axleratio"             "4.2"
+                    "gear"                  "3.1"
+     
+                    "shiftuprpm"            "5600"
+                    "shiftdownrpm"          "1500"
+     
+                    "boost"
+                    {
+    //                      "force"         "3.5"   // 1.5 car body mass * gravity * inches / second ^ 2
+                            "duration"      ".0"    // 1 second of boost
+                            "delay"         "10"    // 15 seconds before you can use it again
+                            "torqueboost"   "0"     // enable "sprint" mode of vehicle, not force type booster                     
+                            "maxspeed"      "110"   // maximum turbo speed
+    //                      "force"         "2.5"   // use for value as a boost factor
+                    }
+            }
+            "steering"
+            {
+                    "degreesSlow"           "40"    // steering cone at zero to slow speed
+                    "degreesFast"           "8"    // steering cone at fast speed to max speed
+                    "degreesBoost"          "5"     // steering cone at max boost speed (blend toward this after max speed)
+                    "steeringExponent"      "1.4"   // steering function is linear, then raised to this power to be slower at the beginning of the curve, faster at the end
+                    "slowcarspeed"          "10"
+                    "fastcarspeed"          "55"
+                    "slowSteeringRate"      "4.0"          
+                    "fastSteeringRate"      "1.0"
+                    "steeringRestRateSlow"  "4.0"
+                    "steeringRestRateFast"  "2.0"
+                    "turnThrottleReduceSlow" "0.2"
+                    "turnThrottleReduceFast" "0.4"
+                    "brakeSteeringRateFactor"       "2"
+                    "throttleSteeringRestRateFactor"        "2"
+                    "boostSteeringRestRateFactor"   "1.7"
+                    "boostSteeringRateFactor"       "1.7"
+     
+                    "powerSlideAccel"       "250"
+     
+                    "skidallowed"           "1"
+                    "dustcloud"             "0"
+     
+            }
+     
+            // front axle
+            "axle"
+            {
+                    "wheel"
+                    {
+                            "radius"        "17"
+                            "mass"          "100"
+                            "inertia"       "1.5"           // steady the car (fixes the oscillation of the axles about z)
+                            "damping"       "1"
+                            "rotdamping"    "1"
+                            "material"      "jeeptire"
+                            "skidmaterial"  "slidingrubbertire"
+                            "brakematerial" "brakingrubbertire"
+                    }
+                    "suspension"
+                    {
+			"springConstant"		"135"	//"springConstant"		jeep	"40"	APC	"80"
+			"springDamping"			"0.7"
+			"stabilizerConstant"		"15"
+			"springDampingCompression"	"5"
+			"maxBodyForce"			"2550"
+                    }
+     
+                    "torquefactor"  "1.4"
+                    "brakefactor"   "0.6"
+            }
+     
+            // rear axle
+            "axle"
+            {
+                    "wheel"
+                    {
+                            "radius"        "17"
+                            "mass"          "100"
+                            "inertia"       "1.5"           // steady the car (fixes the oscillation of the axles about z)
+                            "damping"       "1"
+                            "rotdamping"    "1"
+                            "material"      "jeeptire"
+                            "skidmaterial"  "slidingrubbertire"
+                            "brakematerial" "brakingrubbertire"
+                    }
+                    "suspension"
+                    {
+			"springConstant"		"120"	//"springConstant"		jeep	"40"	APC	"80"
+			"springDamping"			"0.7"
+			"stabilizerConstant"		"15"
+			"springDampingCompression"	"5"
+			"maxBodyForce"			"2550"
+                    }
+                    "torquefactor"  "1.95"
+                    "brakefactor"   "0.7"
+            }
+    }
+     
+    "vehicle_sounds"
+    {
+            // List gears in order from lowest speed to highest speed
+     
+            "gear"
+            {
+                    "max_speed"             "0.05"
+                    "speed_approach_factor" "1.0"
+            }
+     
+            "gear"
+            {
+                    "max_speed"             "0.3"
+                    "speed_approach_factor" "0.08"
+            }
+            "gear"
+            {
+                    "max_speed"             "0.42"
+                    "speed_approach_factor" "0.05"
+            }
+            "gear"
+            {
+                    "max_speed"             "0.55" // = 1040/1432
+                    "speed_approach_factor" "0.035"
+            }
+            "gear"
+            {
+                    "max_speed"             "8.0"
+                    "speed_approach_factor" "0.01"
+            }
+            "state"
+            {
+                    "name"          "SS_START_WATER"
+                    "sound"         "ATV_start_in_water"
+            }
+     
+            "state"
+            {
+                    "name"          "SS_START_IDLE"
+                    "sound"         "vehicles\TDMCars\audir8\idle.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_SHUTDOWN_WATER"
+                    "sound"         "ATV_stall_in_water"
+            }
+            "state"
+            {
+                    "name"          "SS_IDLE"
+                    "sound"         "vehicles\TDMCars\audir8\idle.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_REVERSE"
+                    "sound"         "vehicles\TDMCars\audir8\rev.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_0"
+                    "sound"         "vehicles\TDMCars\audir8\rev.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_0_RESUME"
+                    "sound"         "vehicles\TDMCars\audir8\first.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_1"
+                    "sound"         "vehicles\TDMCars\audir8\first.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_1_RESUME"
+                    "sound"         "vehicles\TDMCars\audir8\second.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_2"
+                    "sound"         "vehicles\TDMCars\audir8\second.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_2_RESUME"
+                    "sound"         "vehicles\TDMCars\audir8\third.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_3"
+                    "sound"         "vehicles\TDMCars\audir8\third.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_3_RESUME"
+                    "sound"         "vehicles\TDMCars\audir8\fourth_cruise.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_4"
+                    "sound"         "vehicles\TDMCars\audir8\fourth_cruise.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_GEAR_4_RESUME"
+                    "sound"         "vehicles\TDMCars\audir8\fourth_cruise.wav"
+
+            }
+            "state"
+            {
+                    "name"          "SS_SLOWDOWN_HIGHSPEED"
+                    "sound"         "vehicles\TDMCars\audir8\throttle_off.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_SLOWDOWN"
+                    "sound"         "vehicles\TDMCars\audir8\idle.wav"
+            }
+            "state"
+            {
+                    "name"          "SS_TURBO"
+                    "sound"         "ATV_turbo_on"
+                    "min_time"      "2.5"
+            }
+            "state"
+            {
+                    "name"          "SS_SHUTDOWN"
+                    "sound"         "vehicles\TDMCars\audir8\stop.wav"
+            }
+            "crashsound"
+            {
+                    "min_speed"                     "350"
+                    "min_speed_change"      "250"
+                    "sound"                         "ATV_impact_medium"
+                    "gear_limit"            "1"
+            }
+            "crashsound"
+            {
+                    "min_speed"                     "450"
+                    "min_speed_change"      "350"
+                    "sound"                         "ATV_impact_heavy"
+            }
+     
+           
+            "skid_lowfriction"              "ATV_skid_highfriction"
+            "skid_normalfriction"   "ATV_skid_highfriction"
+            "skid_highfriction"             "ATV_skid_highfriction"
+    }

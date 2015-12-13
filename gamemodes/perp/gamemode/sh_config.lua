@@ -1,10 +1,10 @@
 
 
 
-GM.Name = "PERP"; 
-GM.Author = "Ramses"; 
+GM.Name = "Grand Theft Auto Online"; 
+GM.Author = "|CTS| SkyWalker"; 
 
-WEBSERVER_ADDRESS = "loading.gmod.ctsgaming.com/config";
+WEBSERVER_ADDRESS = "loading.gmod.ctsgaming.com/perp/config";
 
 VALID_CHARACTERS 			= 	{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
 								"1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "-", "_", "=", "+", "0"};
@@ -264,9 +264,9 @@ FREE_CASH_PER_PLAYER = 50
 // Client config stuff
 if SERVER then return; end
 
-URL_RULES 					= 	"http://loading.gmod.ctsgaming.com/config/rules.txt";
-URL_CHAT 					= 	"http://loading.gmod.ctsgaming.com/config/chat.txt";
-URL_FAQ						=	"http://loading.gmod.ctsgaming.com/config/faq.txt";
+URL_RULES 					= 	"http://loading.gmod.ctsgaming.com/perp/docs/rules.txt";
+URL_CHAT 					= 	"http://loading.gmod.ctsgaming.com/perp/docs/chat.txt";
+URL_FAQ						=	"http://loading.gmod.ctsgaming.com/perp/docs/faq.txt";
 //IMPORTANT, ADD YOUR OWN WEBSITE HERE, IT SHOULD LOOK LIKE http://www.yourwebsite.com/xxx.txt, repeat for each file, rules, chat, and FAQ!!!
 
 

@@ -1,0 +1,248 @@
+// prius, created by TheDanishMaster in 06/05/12 21:09:45, using Vehicle Controller (VCMod).
+
+"Vehicle"
+{
+	"WheelsPerAxle"		"2"
+	"Body"
+	{
+		"CounterTorqueFactor"	"0.9"
+		"MassCenterOverride"	"0 5 20"
+		"MassOverride"			"1400"
+		"AddGravity"			"0.5"
+		"MaxAngularVelocity"	"120"
+	}
+	"Engine"
+	{
+		"HorsePower"			"250"
+		"MaxRPM"				"5000"
+		"MaxSpeed"				"112"
+		"MaxReverseSpeed"		"14"
+		"AutobrakeSpeedGain"	"1.1"
+		"AutobrakeSpeedFactor"	"3"
+		"Autotransmission"		"1"
+		"AxleRatio"				"4.56"
+		"Gear"					"3.2"
+		"Gear"					"2.4"
+		"Gear"					"1.5"
+		"Gear"					"1"
+		"Gear"					"0.84"
+
+		"ShiftUpRPM"			"3800"
+		"ShiftDownRPM"			"1600"
+	}
+	"Steering"
+	{
+		"DegreesSlow"						"40"
+		"DegreesFast"						"18"
+		"DegreesBoost"						"11"
+		"FastDampen"						"0"
+		"SteeringExponent"					"1.4"
+		"SlowCarSpeed"						"14"
+		"FastCarSpeed"						"40"
+		"SlowSteeringRate"					"3.5"
+		"FastSteeringRate"					"1.6"
+		"SteeringRestRateSlow"				"3.5"
+		"SteeringRestRateFast"				"1.6"
+		"TurnThrottleReduceSlow"			"0.01"
+		"TurnThrottleReduceFast"			"1"
+		"BrakeSteeringRateFactor"			"4"
+		"ThrottleSteeringRestRateFactor"	"2"
+		"BoostSteeringRestRateFactor"		"1.7"
+		"BoostSteeringRateFactor"			"1.7"
+
+		"PowerSlideAccel"					"250"
+
+		"SkidAllowed"						"1"
+		"DustCloud"							"1"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"14.5"
+			"Mass"							"100"
+			"Inertia"						"0"
+			"Damping"						"0"
+			"RotDamping"					"0"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"jeeptire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"160"
+			"SpringDamping"					"0.33"
+			"StabilizerConstant"			"0"
+			"SpringDampingCompression"		"4.9"
+			"MaxBodyForce"					"15"
+		}
+		"TorqueFactor"						"0.7"
+		"BrakeFactor"						"0.4"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"14.5"
+			"Mass"							"196"
+			"Inertia"						"0"
+			"Damping"						"0.09"
+			"RotDamping"					"0.06"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"jeeptire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"120"
+			"SpringDamping"					"0.21"
+			"StabilizerConstant"			"0"
+			"SpringDampingCompression"		"4.94"
+			"MaxBodyForce"					"15"
+		}
+		"TorqueFactor"						"0.3"
+		"BrakeFactor"						"0.6"
+	}
+}
+
+"Vehicle_Sounds"
+{
+	"Gear"
+	{
+		"Max_Speed"				"0.02"
+		"Speed_Approach_Factor"	"1"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.2"
+		"Speed_Approach_Factor"	"0.05"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.44"
+		"Speed_Approach_Factor"	"0.052"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.5"
+		"Speed_Approach_Factor"	"0.034"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.64"
+		"Speed_Approach_Factor"	"0.033"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"2"
+		"Speed_Approach_Factor"	"0.03"
+	}
+	"State"
+	{
+		"Name"		"SS_START_IDLE"
+		"Sound"		"tdmprius_idle"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_0"
+		"Sound"		"tdmprius_rev"
+		"Min_Time"	"0.05"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_1_RESUME"
+		"Sound"		"tdmprius_noshift"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_3_RESUME"
+		"Sound"		"tdmprius_noshift"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_3"
+		"Sound"		"tdmprius_thirdgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_2"
+		"Sound"		"tdmprius_secondgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_1"
+		"Sound"		"tdmprius_firstgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_IDLE"
+		"Sound"		"tdmprius_idle"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"SS_REVERSE"
+		"Sound"		"tdmprius_reverse"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_4_RESUME"
+		"Sound"		"tdmprius_fourthgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SLOWDOWN"
+		"Sound"		"tdmprius_idle"
+		"Min_Time"	"2"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_0_RESUME"
+		"Sound"		"tdmprius_idle"
+		"Min_Time"	"0.05"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_2_RESUME"
+		"Sound"		"tdmprius_noshift"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_GEAR_4"
+		"Sound"		"tdmprius_fourthgear"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"SS_SLOWDOWN_HIGHSPEED"
+		"Sound"		"tdmprius_slowdown"
+		"Min_Time"	"2"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"350"
+		"Min_Speed_Change"	"250"
+		"Sound"				"atv_impact_medium"
+		"Gear_Limit"		"1"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"450"
+		"Min_Speed_Change"	"350"
+		"Sound"				"atv_impact_heavy"
+		"Gear_Limit"		"0"
+	}
+
+	"Skid_LowFriction"		"tdmcars_skid"
+	"Skid_NormalFriction"	"tdmcars_skid"
+	"Skid_HighFriction"		"jnk_skid_highfriction"
+}

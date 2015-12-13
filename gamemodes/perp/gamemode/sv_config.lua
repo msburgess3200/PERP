@@ -1,7 +1,7 @@
 
 
 
-REGISTRATION_ADDR = "http://loading.gmod.ctsgaming.com/register.php?steamid="; // CHANGE THIS TO YOUR URL FOR REGISTER.PHP
+REGISTRATION_ADDR = "http://loading.gmod.ctsgaming.com/perp/register.php?steamid="; // CHANGE THIS TO YOUR URL FOR REGISTER.PHP
 CHANGE_PASSW_ADDR = "";
 
 // EXPERIENCE VALUES

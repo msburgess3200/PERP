@@ -1,0 +1,267 @@
+// gmcvan, created by TheDanishMaster in 01/09/12 17:09:40, using Vehicle Controller (VCMod).
+
+"Vehicle"
+{
+	"WheelsPerAxle"		"2"
+	"Body"
+	{
+		"CounterTorqueFactor"	"0.9"
+		"MassCenterOverride"	"0 10 30"
+		"MassOverride"			"3500"
+		"AddGravity"			"0.5"
+		"MaxAngularVelocity"	"720"
+	}
+	"Engine"
+	{
+		"HorsePower"			"250"
+		"MaxRPM"				"4200"
+		"MaxSpeed"				"65"
+		"MaxReverseSpeed"		"14"
+		"AutobrakeSpeedGain"	"1.1"
+		"AutobrakeSpeedFactor"	"3"
+		"Autotransmission"		"1"
+		"AxleRatio"				"4.56"
+		"Gear"					"3.2"
+		"Gear"					"2.4"
+		"Gear"					"1.5"
+		"Gear"					"1"
+		"Gear"					"0.84"
+
+		"ShiftUpRPM"			"3800"
+		"ShiftDownRPM"			"1600"
+	}
+	"Steering"
+	{
+		"DegreesSlow"						"40"
+		"DegreesFast"						"15"
+		"DegreesBoost"						"11"
+		"FastDampen"						"0"
+		"SteeringExponent"					"1.4"
+		"SlowCarSpeed"						"18"
+		"FastCarSpeed"						"30"
+		"SlowSteeringRate"					"3"
+		"FastSteeringRate"					"1.5"
+		"SteeringRestRateSlow"				"4"
+		"SteeringRestRateFast"				"2"
+		"TurnThrottleReduceSlow"			"0.01"
+		"TurnThrottleReduceFast"			"0.6"
+		"BrakeSteeringRateFactor"			"6"
+		"ThrottleSteeringRestRateFactor"	"2"
+		"BoostSteeringRestRateFactor"		"1.7"
+		"BoostSteeringRateFactor"			"1.7"
+
+		"PowerSlideAccel"					"250"
+
+		"SkidAllowed"						"1"
+		"DustCloud"							"1"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"15"
+			"Mass"							"100"
+			"Inertia"						"0"
+			"Damping"						"0"
+			"RotDamping"					"0"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"slidingrubbertire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"90"
+			"SpringDamping"					"0.2"
+			"StabilizerConstant"			"0"
+			"SpringDampingCompression"		"3"
+			"MaxBodyForce"					"30"
+		}
+		"TorqueFactor"						"0.05"
+		"BrakeFactor"						"0.8"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"						"15"
+			"Mass"							"100"
+			"Inertia"						"0"
+			"Damping"						"0"
+			"RotDamping"					"0"
+			"Material"						"jeeptire"
+			"SkidMaterial"					"slidingrubbertire"
+			"BrakeMaterial"					"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"				"90"
+			"SpringDamping"					"0.2"
+			"StabilizerConstant"			"0"
+			"SpringDampingCompression"		"3"
+			"MaxBodyForce"					"30"
+		}
+		"TorqueFactor"						"1.6"
+		"BrakeFactor"						"0.3"
+	}
+}
+
+"Vehicle_Sounds"
+{
+	"Gear"
+	{
+		"Max_Speed"				"0.27"
+		"Speed_Approach_Factor"	"1"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.5"
+		"Speed_Approach_Factor"	"0.05"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.75"
+		"Speed_Approach_Factor"	"0.052"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.95"
+		"Speed_Approach_Factor"	"0.034"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"1.5"
+		"Speed_Approach_Factor"	"0.033"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"2"
+		"Speed_Approach_Factor"	"0.03"
+	}
+	"State"
+	{
+		"Name"		"ss_start_idle"
+		"Sound"		"vehicles\tdmcars\van\start.mp3"
+		"Min_Time"	"2"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+		"Min_Time"	"0"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1_resume"
+		"Sound"		"vehicles\tdmcars\van\first.mp3"
+		"Min_Time"	"0.0"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3_resume"
+		"Sound"		"vehicles\tdmcars\van\third.mp3"
+		"Min_Time"	"0.0"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3"
+		"Sound"		"vehicles\tdmcars\van\third.mp3"
+		"Min_Time"	"4.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2"
+		"Sound"		"vehicles\tdmcars\van\second.mp3"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1"
+		"Sound"		"vehicles\tdmcars\van\first.mp3"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown"
+		"Sound"		"vehicles\tdmcars\chevelless\stop.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_idle"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_reverse"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2_resume"
+		"Sound"		"vehicles\tdmcars\van\second.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4_resume"
+		"Sound"		"vehicles\tdmcars\van\fourth_cruise.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_turbo"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_start_water"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0_resume"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+		"Min_Time"	"0.0"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown_water"
+		"Sound"		"vehicles\tdmcars\van\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4"
+		"Sound"		"vehicles\tdmcars\van\fourth_cruise.wav"
+		"Min_Time"	"4.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown_highspeed"
+		"Sound"		"vehicles\tdmcars\van\throttle_off.mp3"
+	}
+
+	"CrashSound"
+	{
+		"Min_Speed"			"350"
+		"Min_Speed_Change"	"250"
+		"Sound"				"atv_impact_medium"
+		"Gear_Limit"		"1"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"450"
+		"Min_Speed_Change"	"350"
+		"Sound"				"atv_impact_heavy"
+		"Gear_Limit"		"0"
+	}
+
+	"Skid_LowFriction"		"atv_skid_highfriction"
+	"Skid_NormalFriction"	"atv_skid_highfriction"
+	"Skid_HighFriction"		"atv_skid_highfriction"
+}

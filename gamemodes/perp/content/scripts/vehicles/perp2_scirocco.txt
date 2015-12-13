@@ -1,0 +1,251 @@
+// scirocco, created by TheDanishMaster in 10/10/11 17:56:11, using Vehicle Controller (VCMod).
+
+"Vehicle"
+{
+	"WheelsPerAxle"		"2"
+	"Body"
+	{
+		"CounterTorqueFactor"	"1.5"
+		"MassCenterOverride"	"0 0 10"
+		"MassOverride"			"1400"
+		"AddGravity"			"1"
+		"MaxAngularVelocity"	"300"
+	}
+	"Engine"
+	{
+		"HorsePower"			"261"
+		"MaxRPM"				"8000"
+		"MaxSpeed"				"140"
+		"MaxReverseSpeed"		"20"
+		"AutobrakeSpeedGain"	"1.1"
+		"AutobrakeSpeedFactor"	"3"
+		"Autotransmission"		"1"
+		"AxleRatio"				"5.3"
+		"Gear"					"2.16"
+		"Gear"					"1.59"
+		"Gear"					"1.17"
+		"Gear"					"1"
+		"Gear"					"0.84"
+
+		"ShiftUpRPM"			"6500"
+		"ShiftDownRPM"			"4500"
+	}
+	"Steering"
+	{
+		"DegreesSlow"						"40"
+		"DegreesFast"						"12"
+		"DegreesBoost"						"5"
+		"SteeringExponent"					"1.4"
+		"SlowCarSpeed"						"15"
+		"FastCarSpeed"						"35"
+		"SlowSteeringRate"					"3"
+		"FastSteeringRate"					"1.5"
+		"SteeringRestRateSlow"				"3.3"
+		"SteeringRestRateFast"				"1.8"
+		"TurnThrottleReduceSlow"			"0.2"
+		"TurnThrottleReduceFast"			"0.9"
+		"BrakeSteeringRateFactor"			"2"
+		"ThrottleSteeringRestRateFactor"	"2"
+		"BoostSteeringRestRateFactor"		"1.7"
+		"BoostSteeringRateFactor"			"1.7"
+
+		"PowerSlideAccel"					"250"
+
+		"SkidAllowed"						"1"
+		"DustCloud"							"0"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"		"14"
+			"Mass"			"100"
+			"Inertia"		"1"
+			"Damping"		"0.1"
+			"RotDamping"	"0.4"
+			"Material"		"jeeptire"
+			"SkidMaterial"	"slidingrubbertire"
+			"BrakeMaterial"	"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"			"150"
+			"SpringDamping"				"0.6"
+			"StabilizerConstant"		"3"
+			"SpringDampingCompression"	"5"
+			"MaxBodyForce"				"50"
+		}
+		"TorqueFactor"						"2.5"
+		"BrakeFactor"						"0.4"
+	}
+	"Axle"
+	{
+		"Wheel"
+		{
+			"Radius"		"14"
+			"Mass"			"100"
+			"Inertia"		"1"
+			"Damping"		"0.1"
+			"RotDamping"	"0.4"
+			"Material"		"jeeptire"
+			"SkidMaterial"	"slidingrubbertire"
+			"BrakeMaterial"	"brakingrubbertire"
+		}
+		"Suspension"
+		{
+			"SpringConstant"			"150"
+			"SpringDamping"				"0.6"
+			"SpringDampingCompression"	"5"
+			"MaxBodyForce"				"50"
+		}
+		"BrakeFactor"						"1.2"
+	}
+}
+
+"Vehicle_Sounds"
+{
+	"Gear"
+	{
+		"Max_Speed"				"0.05"
+		"Speed_Approach_Factor"	"1"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.24"
+		"Speed_Approach_Factor"	"0.07"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"0.5"
+		"Speed_Approach_Factor"	"0.108"
+	}
+	"Gear"
+	{
+		"Max_Speed"				"1"
+		"Speed_Approach_Factor"	"0.015"
+	}
+	"State"
+	{
+		"Name"		"ss_start_idle"
+		"Sound"		"vehicles\tdmcars\scirocco\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0"
+		"Sound"		"vehicles\tdmcars\scirocco\idle.wav"
+		"Min_Time"	"0.75"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1_resume"
+		"Sound"		"vehicles\tdmcars\scirocco\noshift.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3_resume"
+		"Sound"		"vehicles\tdmcars\scirocco\fourth_cruise.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_3"
+		"Sound"		"vehicles\tdmcars\scirocco\fourth.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2"
+		"Sound"		"vehicles\tdmcars\scirocco\second.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_1"
+		"Sound"		"vehicles\tdmcars\scirocco\first.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown"
+		"Sound"		"vehicles\tdmcars\chevelless\stop.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_idle"
+		"Sound"		"vehicles\tdmcars\scirocco\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_reverse"
+		"Sound"		"vehicles\tdmcars\scirocco\rev.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_2_resume"
+		"Sound"		"vehicles\tdmcars\scirocco\noshift.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4_resume"
+		"Sound"		"vehicles\tdmcars\scirocco\fourth_cruise.wav"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_turbo"
+		"Sound"		"atv_turbo_on"
+		"Min_Time"	"2.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown"
+		"Sound"		"vehicles\tdmcars\scirocco\idle.wav"
+	}
+	"State"
+	{
+		"Name"		"ss_start_water"
+		"Sound"		"atv_start_in_water"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_0_resume"
+		"Sound"		"vehicles\tdmcars\scirocco\noshift.wav"
+		"Min_Time"	"0.75"
+	}
+	"State"
+	{
+		"Name"		"ss_shutdown_water"
+		"Sound"		"atv_stall_in_water"
+	}
+	"State"
+	{
+		"Name"		"ss_gear_4"
+		"Sound"		"vehicles\tdmcars\scirocco\fourth.mp3"
+		"Min_Time"	"0.5"
+	}
+	"State"
+	{
+		"Name"		"ss_slowdown_highspeed"
+		"Sound"		"vehicles\tdmcars\scirocco\throttle_off.wav"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"350"
+		"Min_Speed_Change"	"250"
+		"Sound"				"atv_impact_medium"
+		"Gear_Limit"		"1"
+	}
+	"CrashSound"
+	{
+		"Min_Speed"			"450"
+		"Min_Speed_Change"	"350"
+		"Sound"				"atv_impact_heavy"
+	}
+
+	"Skid_LowFriction"		"atv_skid_highfriction"
+	"Skid_NormalFriction"	"atv_skid_highfriction"
+	"Skid_HighFriction"		"atv_skid_highfriction"
+}

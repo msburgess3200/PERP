@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2015 at 08:12 AM
+-- Generation Time: Dec 13, 2015 at 05:10 AM
 -- Server version: 5.7.9-log
 -- PHP Version: 5.3.28
 
@@ -23,69 +23,107 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customize_car`
+--
+
+CREATE TABLE IF NOT EXISTS `customize_car` (
+  `steamid` text NOT NULL,
+  `carid` text,
+  `red` text,
+  `green` text,
+  `blue` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `perp_bname`
 --
 
 CREATE TABLE IF NOT EXISTS `perp_bname` (
+  `id` int(11) NOT NULL,
   `name` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `perp_bname`
 --
 
-INSERT INTO `perp_bname` (`name`) VALUES
-('Ryan Fisher'),
-('Ryan Fisher'),
-('Hugh Jurection'),
-('Dan Gleasak'),
-('Justin Beiber'),
-('Justin Beiber'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Fuck You'),
-('Sandman Lighty'),
-('Ryan Tuck'),
-('Jon Doe'),
-('Charlie Bitme'),
-('John Pratson'),
-('Emre Keskinkilic'),
-('Sandman Lighty'),
-('Sandman Lighty'),
-('Ang Man'),
-('Fast Zombie'),
-('Fast Zombie'),
-('Fast Zombie'),
-('Fast Zombie'),
-('Histeve Doe'),
-('Jim Raynor'),
-('Hugh Miles'),
-('Jim Rayn'),
-('Dan Gleasak'),
-('Dane Gulsak'),
-('Woody Woodpecker'),
-('Gina Man'),
-('Moe John'),
-('Joe Don'),
-('Joe Gothic'),
-('Joe Don'),
-('Joe Doe'),
-('John Doe'),
-('John Doe'),
-('John Doe'),
-('Bob Tomson'),
-('John Doe'),
-('John Doe'),
-('John Doe');
+INSERT INTO `perp_bname` (`id`, `name`) VALUES
+(2, 'Fuck You'),
+(1, 'John Doe');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `perp_fuel`
+--
+
+CREATE TABLE IF NOT EXISTS `perp_fuel` (
+  `uid` int(11) NOT NULL,
+  `1` int(11) NOT NULL DEFAULT '10000',
+  `2` int(11) NOT NULL DEFAULT '10000',
+  `3` int(11) NOT NULL DEFAULT '10000',
+  `4` int(11) NOT NULL DEFAULT '10000',
+  `5` int(11) NOT NULL DEFAULT '10000',
+  `6` int(11) NOT NULL DEFAULT '10000',
+  `7` int(11) NOT NULL DEFAULT '10000',
+  `8` int(11) NOT NULL DEFAULT '10000',
+  `9` int(11) NOT NULL DEFAULT '10000',
+  `10` int(11) NOT NULL DEFAULT '10000',
+  `11` int(11) NOT NULL DEFAULT '10000',
+  `12` int(11) NOT NULL DEFAULT '10000',
+  `13` int(11) NOT NULL DEFAULT '10000',
+  `14` int(11) NOT NULL DEFAULT '10000',
+  `15` int(11) NOT NULL DEFAULT '10000',
+  `16` int(11) NOT NULL DEFAULT '10000',
+  `17` int(11) NOT NULL DEFAULT '10000',
+  `18` int(11) NOT NULL DEFAULT '10000',
+  `19` int(11) NOT NULL DEFAULT '10000',
+  `20` int(11) NOT NULL DEFAULT '10000',
+  `21` int(11) NOT NULL DEFAULT '10000',
+  `22` int(11) NOT NULL DEFAULT '10000',
+  `23` int(11) NOT NULL DEFAULT '10000',
+  `24` int(11) NOT NULL DEFAULT '10000',
+  `25` int(11) NOT NULL DEFAULT '10000',
+  `26` int(11) NOT NULL DEFAULT '10000',
+  `27` int(11) NOT NULL DEFAULT '10000',
+  `28` int(11) NOT NULL DEFAULT '10000',
+  `29` int(11) NOT NULL DEFAULT '10000',
+  `30` int(11) NOT NULL DEFAULT '10000',
+  `31` int(11) NOT NULL DEFAULT '10000',
+  `32` int(11) NOT NULL DEFAULT '10000',
+  `33` int(11) NOT NULL DEFAULT '10000',
+  `34` int(11) NOT NULL DEFAULT '10000',
+  `35` int(11) NOT NULL DEFAULT '10000',
+  `36` int(11) NOT NULL DEFAULT '10000',
+  `37` int(11) NOT NULL DEFAULT '10000',
+  `38` int(11) NOT NULL DEFAULT '10000',
+  `39` int(11) NOT NULL DEFAULT '10000',
+  `40` int(11) NOT NULL DEFAULT '10000',
+  `41` int(11) NOT NULL DEFAULT '10000',
+  `42` int(11) NOT NULL DEFAULT '10000',
+  `43` int(11) NOT NULL DEFAULT '10000',
+  `44` int(11) NOT NULL DEFAULT '10000',
+  `45` int(11) NOT NULL DEFAULT '10000',
+  `46` int(11) NOT NULL DEFAULT '10000',
+  `47` int(11) NOT NULL DEFAULT '10000',
+  `48` int(11) NOT NULL DEFAULT '10000',
+  `49` int(11) NOT NULL DEFAULT '10000',
+  `50` int(11) NOT NULL DEFAULT '10000',
+  `51` int(11) NOT NULL DEFAULT '10000',
+  `52` int(11) NOT NULL DEFAULT '10000',
+  `53` int(11) NOT NULL DEFAULT '10000',
+  `54` int(11) NOT NULL DEFAULT '10000',
+  `55` int(11) NOT NULL DEFAULT '10000'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `perp_fuel`
+--
+
+INSERT INTO `perp_fuel` (`uid`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`, `30`, `31`, `32`, `33`, `34`, `35`, `36`, `37`, `38`, `39`, `40`, `41`, `42`, `43`, `44`, `45`, `46`, `47`, `48`, `49`, `50`, `51`, `52`, `53`, `54`, `55`) VALUES
+(1464280204, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000);
 
 -- --------------------------------------------------------
 
@@ -112,6 +150,29 @@ INSERT INTO `perp_organization` (`id`, `name`, `motd`, `owner`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `perp_spawn_locations`
+--
+
+CREATE TABLE IF NOT EXISTS `perp_spawn_locations` (
+  `steamid` text NOT NULL,
+  `vector` text NOT NULL,
+  `angle` text NOT NULL,
+  `deathtime` int(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `perp_spawn_locations`
+--
+
+INSERT INTO `perp_spawn_locations` (`steamid`, `vector`, `angle`, `deathtime`) VALUES
+('STEAM_0:1:12383152', '-4424.017578 -709.358398 64.031250', '0.000 -88.616 0.000', 0),
+('STEAM_0:0:59924134', '-6305.042969 -7913.229980 72.163750', '0.000 0.000 0.000', 0),
+('STEAM_0:1:82407778', '-7543.169922 -6511.993164 72.031250', '0.000 -76.193 0.000', 0),
+('STEAM_0:1:25884344', '-6305.042969 -7913.229980 72.163750', '0.000 0.000 0.000', 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `perp_system`
 --
 
@@ -127,7 +188,9 @@ CREATE TABLE IF NOT EXISTS `perp_system` (
 INSERT INTO `perp_system` (`key`, `value`) VALUES
 ('date_year_1', '1'),
 ('date_month_1', '2'),
-('date_day_1', '9');
+('date_day_1', '38'),
+('online_1', '1450011796'),
+('players_1', '0');
 
 -- --------------------------------------------------------
 
@@ -136,8 +199,8 @@ INSERT INTO `perp_system` (`key`, `value`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `perp_users` (
-  `uid` int(11) NOT NULL,
-  `id` int(11) NOT NULL,
+  `uid` bigint(11) NOT NULL,
+  `id` text NOT NULL,
   `steamid` text NOT NULL,
   `blacklists` text NOT NULL,
   `rp_name_first` text NOT NULL,
@@ -146,6 +209,7 @@ CREATE TABLE IF NOT EXISTS `perp_users` (
   `cash` bigint(20) NOT NULL,
   `model` text NOT NULL,
   `items` text NOT NULL,
+  `storage` text NOT NULL,
   `skills` text NOT NULL,
   `genes` text NOT NULL,
   `formulas` text NOT NULL,
@@ -153,55 +217,172 @@ CREATE TABLE IF NOT EXISTS `perp_users` (
   `bank` bigint(20) NOT NULL,
   `vehicles` text NOT NULL,
   `ringtones` text NOT NULL,
-  `ammo_pistol` int(11) NOT NULL,
-  `ammo_rifle` int(11) NOT NULL,
-  `ammo_shotgun` int(11) NOT NULL,
+  `ammo_pistol` int(11) unsigned zerofill NOT NULL DEFAULT '00000000000',
+  `ammo_rifle` int(11) unsigned zerofill NOT NULL DEFAULT '00000000000',
+  `ammo_shotgun` int(11) unsigned zerofill NOT NULL DEFAULT '00000000000',
   `ringtone` int(11) NOT NULL DEFAULT '1',
-  `last_played` text NOT NULL
+  `last_played` text NOT NULL,
+  `fuelleft` int(11) NOT NULL DEFAULT '10000',
+  `lastcar` text,
+  `ticket` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `perp_users`
 --
 
-INSERT INTO `perp_users` (`uid`, `id`, `steamid`, `blacklists`, `rp_name_first`, `rp_name_last`, `time_played`, `cash`, `model`, `items`, `skills`, `genes`, `formulas`, `organization`, `bank`, `vehicles`, `ringtones`, `ammo_pistol`, `ammo_rifle`, `ammo_shotgun`, `ringtone`, `last_played`) VALUES
-(2147483647, 8330, 'STEAM_0:0:19682008', '', 'John', 'Watkinson', 28135, 14675, '1_1_1', '3,1,1;4,2,1;5,3,1;6,12,1;7,12,1;10,18,3;11,22,3;12,31,4456;13,22,2;15,28,4475;17,41,2;19,41,3;20,6,1;21,12,1;22,66,1;23,51,1;24,47,1;25,45,4;26,52,1;27,60,1;29,4,1;30,44,3;31,58,1;32,15,5;', '10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;', '10;10;10;10;10;10;', '11;12;9;4;8;6;', 36, 1998868376, 'c,4,1,0;b,1,1,0;e,5,5,1;d,1,1,0;g,1,1,0;k,1,1,0;j,1,1,0;m,1,1,1;l,1,1,0;', '', 0, 0, 0, 2, '1283266062'),
-(1577284270, 8329, 'STEAM_0:0:25347701', '', 'Thomaz', 'Jacbs', 216, 500, '1_9_1', '', '4;0;0;0;0;0;0;0;0;0;0;0;', '0;5;0;0;0;0;', '', 0, 200, '', '', 0, 0, 0, 1, '1282982639'),
-(2147483647, 8319, 'STEAM_0:0:28425458', '', 'Joey', 'Moe', 1353564, 20000, '1_4_8', '3,2,1;4,3,1;5,16,1;6,28,9996;7,31,9915;8,41,9999;9,42,3;10,66,10000;11,15,5;12,15,5;13,61,5;14,61,5;15,61,5;16,61,5;17,12,1;18,12,1;19,6,1;20,43,1;21,71,9995;22,70,9996;23,14,10;24,14,10;25,14,10;26,14,10;32,71,1;', '10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;10000;', '0;10;10;10;10;10;', '11;12;9;4;8;6;7;5;', 36, 1007193022, 'a,3,5,1;c,3,5,1;b,5,7,1;e,3,8,1;d,2,4,1;g,3,4,1;f,2,3,1;i,3,5,1;h,8,4,1;k,8,3,1;j,9,4,1;m,3,2,1;l,9,3,1;o,1,1,0;', '', 0, 0, 0, 14, '1283546400'),
-(2101795625, 8331, 'STEAM_0:1:6796526', '', 'Daniel', 'Veloso', 11992, 5100, '1_4_8', '2,36,1;3,12,1;4,6,1;', '680;260;0;199;10;112.5;0;4;0;0;0;54;', '0;1;2;2;0;2;', '11;12;9;4;8;5;', 0, 4773, 'e,5,1,0;b,1,1,0;', '', 4, 311, 0, 1, '1283086299'),
-(490740599, 8333, 'STEAM_0:1:8653418', '', 'Steve', 'Dennis', 219736, 0, '1_2_1', '11,14,9;31,14,10;21,14,9;22,14,10;13,14,10;30,14,10;12,14,10;', '3616;8200;23;908;10;135.45135140419;0;0;0;0;0;905;', '0;3;2;3;0;0;', '', 36, 644, 'a,1,1,0;c,1,1,0;b,1,1,0;e,1,1,0;d,1,1,0;g,1,1,0;f,1,1,0;h,1,1,0;k,1,1,0;', '', 0, 0, 0, 3, '1283543886'),
-(2147483647, 8332, 'STEAM_0:1:24168310', '', 'Ryan', 'Fisher', 15822, 0, '1_3_2', '3,14,1;4,12,1;5,1,1;6,49,2;7,26,2;8,3,1;9,2,1;10,42,1;11,57,3;', '652;100;0;364;0;0;0;54;0;0;0;0;', '0;0;3;2;0;0;', '', 36, 31195, 'c,2,1,0;', '', 0, 0, 0, 1, '1283286050'),
-(2147483647, 8344, 'STEAM_0:0:21411593', '', 'Max', 'Anderson', 1630, 2200, '1_2_3', '3,15,1;', '61;0;0;20;0;0;0;2;0;0;0;0;', '3;0;1;1;0;0;', '', 0, 6350, '', '', 0, 0, 0, 1, '1283090479'),
-(1514026548, 8334, 'STEAM_0:0:21459978', '', 'Hugh', 'Miles', 26233, 0, '1_8_1', '4,15,5;5,14,1;6,9,1;7,13,3;', '599;20;5;666;0;1308.2483439446;0;40;0;0;0;0;', '0;0;1;1;1;2;', '', 0, 25467, 'e,8,1,0;', '', 31, 0, 0, 1, '1283538231'),
-(798639070, 8335, 'STEAM_0:1:26414270', '', 'Jonas', 'Joe', 3375, 0, '1_4_1', '', '58;0;0;34;0;0;0;4;0;0;0;0;', '0;1;1;1;1;1;', '', 0, 600, '', '', 0, 0, 0, 1, '1283031226'),
-(912860121, 8336, 'STEAM_0:0:14187204', '', 'Clap', 'Tarp', 47, 500, '1_4_1', '', '0;0;0;0;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 50, '', '', 0, 0, 0, 1, '1283027922'),
-(1632157692, 8341, 'STEAM_0:0:18463428', '', 'Keenan', 'Akit', 27432, 5050, '1_9_1', '3,2,1;4,6,1;5,61,1;8,14,10;9,15,5;11,66,1;12,66,1;13,15,5;14,66,1;15,66,1;', '909;500;34;712;0;401.55570983887;0;62;0;0;0;150;', '0;0;2;2;1;0;', '', 38, 1025, 'b,5,1,0;', '', 0, 0, 0, 6, '1283453348'),
-(1251695618, 8337, 'STEAM_0:1:15821594', '', 'Linsey', 'Lopez', 1537, 1350, '1_1_1', '', '142;0;0;0;0;161.25;0;8;0;0;0;0;', '0;0;1;1;0;3;', '', 0, 400, '', '', 0, 0, 0, 1, '1283030981'),
-(1318824646, 8338, 'STEAM_0:1:16429565', '', 'Andreas', 'Duggu', 1120, 0, '1_7_1', '', '81;0;0;41;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 19200, 'd,1,1,0;', '', 0, 0, 0, 1, '1283031229'),
-(2147483647, 8340, 'STEAM_0:1:15501416', '', 'Gordon', 'Freeman', 9668, 0, '1_7_1', '3,61,1;4,16,1;5,56,1;', '399;0;0;202;0;30;0;12;0;0;0;0;', '0;1;1;1;1;1;', '', 0, 22175, '', '', 67, 0, 0, 1, '1283540364'),
-(990561757, 8339, 'STEAM_0:0:28223790', '', 'John', 'Sigmar', 3573, 16500, '1_9_5', '', '192;0;0;156;0;0;0;24;0;0;0;0;', '0;4;1;0;0;0;', '', 0, 950, 'a,1,1,0;', '', 0, 0, 0, 1, '1283101426'),
-(2147483647, 8346, 'STEAM_0:1:31430158', '', 'John', 'Louis', 56890, 500, '1_7_1', '3,14,10;4,6,1;5,14,9;6,2,1;7,13,10;8,13,10;9,13,10;10,13,10;11,15,5;12,13,10;13,14,10;14,13,10;15,15,5;16,13,9;17,61,5;', '1115;3180;20;1446;0;318.36882781982;0;452;0;0;0;784;', '0;1;3;1;0;0;', '', 36, 51803, 'g,1,1,0;i,3,5,0;', '', 0, 0, 0, 4, '1283352843'),
-(1881558799, 8343, 'STEAM_0:1:9750737', '', 'Marley', 'Steel', 2206, 19500, '1_1_1', '3,28,1;4,28,1;5,28,1;6,28,1;7,28,1;8,28,1;9,28,1;10,28,1;11,28,1;12,28,1;13,28,1;14,28,1;15,28,1;16,28,1;17,28,1;18,28,1;19,28,1;21,31,3;22,31,5;23,31,5;24,31,5;25,31,5;26,31,5;27,31,5;28,31,5;29,31,5;30,2,1;', '40;0;0;0;0;43.9453125;0;4;0;0;0;420;', '0;0;2;2;0;1;', '', 0, 42350, '', '', 0, 0, 0, 1, '1283100267'),
-(1155063511, 8342, 'STEAM_0:0:18368505', '', 'Seth', 'Awsesome', 2029, 0, '1_7_1', '3,14,10;4,14,10;5,14,10;', '158;0;0;54;0;0;0;0;0;0;0;0;', '0;0;1;2;1;1;', '', 0, 11000, 'e,9,1,0;', '', 0, 0, 0, 1, '1283083817'),
-(2147483647, 8345, 'STEAM_0:1:16766957', '', 'Matt', 'Wilson', 2397, 0, '1_1_1', '', '58;0;0;84;0;0;0;6;0;0;0;0;', '0;0;2;2;0;1;', '', 0, 22000, '', '', 0, 0, 0, 1, '1283174794'),
-(2147483647, 8348, 'STEAM_0:1:14928653', '', 'Jonathan', 'Moody', 562, 500, '1_8_1', '', '23;0;0;0;0;0;0;2;0;0;0;0;', '0;3;1;1;0;0;', '', 0, 450, '', '', 0, 0, 0, 1, '1283095496'),
-(2147483647, 8354, 'STEAM_0:0:23337700', '', 'Zac', 'Wyngaert', 4802, 0, '1_1_1', '2,27,5;3,15,5;4,15,2;5,14,5;6,2,1;7,56,1;8,42,1;10,26,5;11,26,5;12,26,5;13,26,5;14,26,5;15,26,5;16,27,5;', '32;0;6;0;0;0;0;0;0;0;0;0;', '0;0;0;0;5;0;', '', 37, 900, '', '', 0, 0, 0, 6, '1283211032'),
-(1263334608, 8347, 'STEAM_0:1:10594100', '', 'Jim', 'Raynor', 65875, 2800, '1_7_5', '3,28,1;4,28,1;5,28,1;6,2,1;7,13,10;8,1,1;9,14,9;10,15,5;11,13,10;12,13,10;13,15,5;14,13,9;', '1001;4680;129;1654;0;1608.1802930311;0;130;0;0;0;212;', '3;0;1;1;0;0;', '', 0, 21255, 'i,3,1,0;j,11,1,0;', '', 0, 0, 0, 6, '1283360944'),
-(2147483647, 8349, 'STEAM_0:0:26404346', '', 'John', 'Jonas', 299, 0, '1_7_1', '3,53,1;', '47;0;0;0;0;0;0;0;0;0;0;0;', '0;2;1;1;1;0;', '', 0, 250, '', '', 0, 0, 0, 1, '1283098963'),
-(2147483647, 8351, 'STEAM_0:1:15594979', '', 'Vito', 'Mueller', 102, 500, '1_1_1', '', '22;0;0;0;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 50, '', '', 0, 0, 0, 1, '1283128944'),
-(764326544, 8350, 'STEAM_0:1:15534037', '', 'John', 'Prantson', 3807, 5500, '1_9_1', '3,2,1;6,56,1;4,61,2;5,15,5;', '75;0;0;25;0;0;0;72;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 1350, '', '', 0, 0, 0, 4, '1283166931'),
-(776264026, 8358, 'STEAM_0:0:29288114', '', 'Bossie', 'Deb', 536, 500, '1_7_1', '', '34;0;0;0;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 400, '', '', 0, 0, 0, 1, '1283259955'),
-(417486297, 8353, 'STEAM_0:1:5638935', '', 'Zoey', 'Kampf', 399, 300, '2_2_1', '3,14,1;', '33;0;0;38;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 350, '', '', 0, 0, 0, 1, '1283188332'),
-(111544835, 8355, 'STEAM_0:1:17856033', '', 'Micheal', 'Neill', 561, 300, '1_2_1', '3,14,2;', '33;0;0;0;0;0;0;0;0;0;0;0;', '0;0;2;2;0;1;', '', 0, 50, '', '', 0, 0, 0, 1, '1283207800'),
-(2147483647, 8356, 'STEAM_0:0:17591530', '', 'John', 'Scofield', 41310, 4100, '1_4_6', '3,2,1;4,56,1;5,12,1;6,28,1;7,36,1;8,36,1;9,36,1;10,30,10;11,30,2;12,15,5;13,14,8;14,14,10;15,15,5;16,13,10;17,13,10;18,13,10;19,13,10;20,13,10;21,13,10;22,13,10;23,13,9;', '957;6020;31;1860;0;0;0;28;160;0;0;0;', '0;0;2;2;0;2;', '5;', 38, 550, 'c,3,1,0;b,7,1,0;', '', 0, 0, 0, 1, '1283425636'),
-(2147483647, 8357, 'STEAM_0:1:4957997', '', 'James', 'Krick', 14820, 0, '1_4_1', '6,14,9;13,15,2;3,15,5;4,13,10;5,13,5;9,15,5;', '186;400;57;5;0;112.5;0;110;0;0;0;0;', '3;0;1;1;0;0;', '', 0, 26500, '', '', 0, 0, 0, 1, '1283269660'),
-(2147483647, 8359, 'STEAM_0:0:17965782', '', 'Rocki', 'Mar', 3069, 500, '1_7_1', '3,28,1;', '45;0;0;0;0;0;0;64;0;0;0;60;', '0;1;3;0;0;1;', '', 0, 2550, '', '', 0, 0, 0, 1, '1283262340'),
-(1953529366, 8360, 'STEAM_0:1:2110129', '', 'Tony', 'Macarony', 5735, 550, '1_7_1', '1,28,1;3,14,6;4,28,1;5,28,1;6,16,1;7,43,2;', '115;100;3;0;0;0;0;0;0;0;0;0;', '0;1;1;1;1;1;', '', 0, 4800, '', '', 0, 0, 0, 1, '1283267002'),
-(2147483647, 8362, 'STEAM_0:0:13393889', '', 'Leeroy', 'Jenkins', 2374, 0, '1_2_1', '', '29;0;0;0;0;0;0;0;0;0;0;0;', '0;0;2;2;0;1;', '', 0, 2400, '', '', 0, 0, 0, 1, '1283300734'),
-(1343459136, 8366, 'STEAM_0:0:29146169', '', 'Alex', 'Swift', 10627, 6325, '1_7_1', '1,70,1;3,2,1;', '323;0;19;198;0;107.25551140308;0;146;0;0;0;0;', '0;1;1;1;1;1;', '', 0, 1025, '', '', 70, 0, 0, 5, '1283543238'),
-(2147483647, 8364, 'STEAM_0:1:26647117', '', 'Jay', 'Hood', 111, 500, '1_1_1', '', '20;0;0;0;0;0;0;0;0;0;0;0;', '5;0;0;0;0;0;', '', 0, 100, '', '', 0, 0, 0, 1, '1283360992'),
-(2147483647, 8363, 'STEAM_0:0:21039608', '', 'Brian', 'Ellington', 4089, 100, '1_7_1', '3,13,1;', '61;200;1;0;0;0;0;0;0;0;0;0;', '3;0;1;1;0;0;', '', 0, 22900, '', '', 0, 0, 0, 1, '1283362568'),
-(1305137408, 8365, 'STEAM_0:1:31635184', '', 'Crill', 'Dill', 1094, 0, '1_2_1', '3,2,1;', '47;0;0;0;0;0;0;0;0;0;0;0;', '0;1;1;1;1;1;', '', 0, 295, '', '', 0, 0, 0, 1, '1283529056');
+INSERT INTO `perp_users` (`uid`, `id`, `steamid`, `blacklists`, `rp_name_first`, `rp_name_last`, `time_played`, `cash`, `model`, `items`, `storage`, `skills`, `genes`, `formulas`, `organization`, `bank`, `vehicles`, `ringtones`, `ammo_pistol`, `ammo_rifle`, `ammo_shotgun`, `ringtone`, `last_played`, `fuelleft`, `lastcar`, `ticket`) VALUES
+(1464280204, 'STEAM_0:1:12383152', 'STEAM_0:1:12383152', '', 'James', 'Bond', 813, 0, '1_1_1', '', '', '6;0;0;0;0;0;0;0;0;0;0;0;0;', '0;0;0;0;0;0;0;', '', 0, 863, '', '', 00000000000, 00000000000, 00000000000, 1, '1449984740', 10000, '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serverguard_analytics`
+--
+
+CREATE TABLE IF NOT EXISTS `serverguard_analytics` (
+  `id` int(11) NOT NULL,
+  `date` varchar(10) NOT NULL,
+  `data` text NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `serverguard_analytics`
+--
+
+INSERT INTO `serverguard_analytics` (`id`, `date`, `data`) VALUES
+(1, '6-12-2015', '{"1":14,"2":{"1":"STEAM_0:1:12383152","2":"STEAM_0:1:80763226"}}'),
+(2, '7-12-2015', '{"1":13,"2":{"1":"STEAM_0:1:12383152","2":"STEAM_0:0:132124148","3":"STEAM_0:1:25884344"}}'),
+(3, '8-12-2015', '{"1":13,"2":{"1":"STEAM_0:0:66155889","2":"STEAM_0:1:12383152","3":"STEAM_0:1:25884344","4":"STEAM_0:0:132124148"}}'),
+(4, '9-12-2015', '{"1":36,"2":{"1":"STEAM_0:1:12383152","2":"STEAM_0:0:59924134","3":"STEAM_0:1:82407778"}}'),
+(5, '10-12-2015', '{"1":58,"2":{"1":"STEAM_0:1:12383152","2":"STEAM_0:1:25884344"}}'),
+(6, '11-12-2015', '{"1":9,"2":{"1":"STEAM_0:1:12383152"}}'),
+(7, '12-12-2015', '{"1":14,"2":{"1":"STEAM_0:1:12383152"}}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serverguard_bans`
+--
+
+CREATE TABLE IF NOT EXISTS `serverguard_bans` (
+  `id` int(11) NOT NULL,
+  `steam_id` varchar(25) NOT NULL,
+  `community_id` text NOT NULL,
+  `player` varchar(255) NOT NULL,
+  `reason` text NOT NULL,
+  `start_time` int(11) NOT NULL,
+  `end_time` int(11) NOT NULL,
+  `admin` varchar(255) NOT NULL,
+  `ip_address` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serverguard_ranks`
+--
+
+CREATE TABLE IF NOT EXISTS `serverguard_ranks` (
+  `id` int(11) NOT NULL,
+  `unique_id` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `color` varchar(40) NOT NULL,
+  `immunity` int(11) NOT NULL,
+  `texture` varchar(255) NOT NULL,
+  `data` text
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `serverguard_ranks`
+--
+
+INSERT INTO `serverguard_ranks` (`id`, `unique_id`, `name`, `color`, `immunity`, `texture`, `data`) VALUES
+(1, 'user', 'Guest', '{"r":100,"b":245,"a":255,"g":150}', 0, 'icon16/user.png', '{"Restrictions":{"Vehicles":2,"Hoverballs":6,"Emitters":3,"Props":128,"Wheels":10,"Sents":4,"Dynamite":3,"Effects":10,"Ragdolls":1,"Lamps":2,"Thrusters":10,"Buttons":6,"Lights":2,"Balloons":4,"Tools":[],"Npcs":1}}'),
+(2, 'founder', 'Founder', '{"r":240,"b":0,"a":255,"g":0}', 99, 'icon16/award_star_gold_1.png', '[]'),
+(3, 'superadmin', 'Super Administrator', '{"r":0,"b":0,"a":255,"g":150}', 25, 'icon16/award_star_silver_1.png', '{"Permissions":{"Sandbox settings":true,"Manage Prop-Protection":true,"Manage Ranks":false,"Bypass Prop Deletion":true,"Manage Players":true,"Extinguish":true,"Invisible":true,"Slay":true,"NPC Target":true,"Ban":true,"Manage Plugins":false,"Respond to Help Requests":true,"Noclip":true,"Set Armor":true,"Strip Weapons":true,"Bypass Prop-Protection":true,"Rcon":false,"Map Restart":true,"Clear Decals":true,"Send":true,"Give Ammo":true,"Manage Prop Blacklist":true,"Ragdoll":true,"Goto":true,"Manage MOTD":true,"Quick Menu":true,"Kick":true,"Freeze Props":true,"Spectate":true,"Screencap":true,"Ignite":true,"Manage Advertisements":true,"Permaban":true,"Return":true,"Admin":true,"Physgun Player":true,"Manage Reports":true,"Server Logs":true,"Bypass Prop Blacklist":true,"Freeze":true,"Announce":true,"Map":true,"Superadmin":true,"Manage Restrictions":false,"God mode":true,"Play Song":true,"Analytics":true,"Unban":true,"Give Weapon":true,"Mute":true,"Slap":true,"Respawn":true,"Set Health":true,"Bring":true},"Restrictions":{"Vehicles":8,"Hoverballs":20,"Emitters":12,"Props":512,"Wheels":50,"Sents":12,"Dynamite":12,"Effects":50,"Ragdolls":6,"Lamps":12,"Thrusters":50,"Buttons":30,"Lights":12,"Balloons":12,"Tools":[],"Npcs":4}}'),
+(4, 'admin', 'Administrator', '{"r":117,"b":211,"a":255,"g":0}', 20, 'icon16/award_star_bronze_1.png', '{"Permissions":{"Sandbox settings":false,"Manage Prop-Protection":false,"Manage Ranks":false,"Bypass Prop Deletion":true,"Manage Players":true,"Extinguish":true,"Invisible":true,"Slay":true,"NPC Target":true,"Ban":true,"Manage Plugins":false,"Respond to Help Requests":true,"Noclip":true,"Set Armor":true,"Strip Weapons":true,"Map Restart":true,"Clear Decals":true,"Send":true,"Give Ammo":true,"Bypass Prop-Protection":true,"Ragdoll":true,"Goto":true,"Rcon":false,"Quick Menu":true,"Kick":true,"Manage MOTD":false,"Spectate":true,"Screencap":false,"Ignite":true,"Freeze Props":false,"Manage Advertisements":false,"Return":true,"Superadmin":false,"Physgun Player":true,"Manage Reports":true,"Server Logs":true,"Permaban":false,"Freeze":true,"Announce":true,"Map":true,"Admin":true,"Manage Restrictions":false,"God mode":true,"Play Song":false,"Analytics":false,"Unban":true,"Give Weapon":true,"Mute":true,"Slap":true,"Respawn":true,"Set Health":true,"Bring":true},"Restrictions":{"Vehicles":4,"Hoverballs":10,"Emitters":6,"Props":256,"Wheels":25,"Sents":8,"Dynamite":6,"Effects":25,"Ragdolls":4,"Lamps":6,"Thrusters":25,"Buttons":15,"Lights":6,"Balloons":6,"Tools":[],"Npcs":2}}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serverguard_reports`
+--
+
+CREATE TABLE IF NOT EXISTS `serverguard_reports` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `steamID` varchar(255) NOT NULL DEFAULT 'Unknown',
+  `text` text NOT NULL,
+  `time` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `serverguard_users`
+--
+
+CREATE TABLE IF NOT EXISTS `serverguard_users` (
+  `id` int(11) NOT NULL,
+  `steam_id` varchar(25) NOT NULL,
+  `rank` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL,
+  `last_played` int(11) NOT NULL,
+  `data` text
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `serverguard_users`
+--
+
+INSERT INTO `serverguard_users` (`id`, `steam_id`, `rank`, `name`, `last_played`, `data`) VALUES
+(1, 'STEAM_0:1:12383152', 'founder', '|CTS| SkyWalker - Need LUA Code', 1449983877, NULL),
+(2, 'STEAM_0:1:80763226', 'user', '|CTS| Dreems_', 1449431183, NULL),
+(3, 'STEAM_0:0:132124148', 'user', '|CTS| Pitch Black', 1449625067, NULL),
+(4, 'STEAM_0:1:25884344', 'user', 'Luffy', 1449739398, NULL),
+(5, 'STEAM_0:0:66155889', 'user', 'SighGun | Grid-Servers.net', 1449557875, NULL),
+(6, 'STEAM_0:0:59924134', 'user', '|CTS| pixelpony', 1449709292, NULL),
+(7, 'STEAM_0:1:82407778', 'user', '|CTS| LaserOfFartâ„¢ Kitties', 1449719008, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `server_bans`
+--
+
+CREATE TABLE IF NOT EXISTS `server_bans` (
+  `steamid` text NOT NULL,
+  `unban_time` text NOT NULL,
+  `unban_time_fixed` text NOT NULL,
+  `banner_name` text NOT NULL,
+  `reason` text NOT NULL,
+  `banned_name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `server_bans_logs`
+--
+
+CREATE TABLE IF NOT EXISTS `server_bans_logs` (
+  `steamid` text NOT NULL,
+  `type` text NOT NULL,
+  `commited_by` text NOT NULL,
+  `reason` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `server_bans_points`
+--
+
+CREATE TABLE IF NOT EXISTS `server_bans_points` (
+  `steamid` text NOT NULL,
+  `time` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -13775,52 +13956,14 @@ CREATE TABLE IF NOT EXISTS `smf_members` (
   `aeva_comments` int(11) NOT NULL DEFAULT '0',
   `aeva_unseen` int(11) NOT NULL DEFAULT '-1',
   `aeva` varchar(255) NOT NULL DEFAULT ''
-) ENGINE=MyISAM AUTO_INCREMENT=8367 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `smf_members`
 --
 
 INSERT INTO `smf_members` (`ID_MEMBER`, `memberName`, `dateRegistered`, `posts`, `ID_GROUP`, `lngfile`, `lastLogin`, `realName`, `instantMessages`, `unreadMessages`, `buddy_list`, `pm_ignore_list`, `messageLabels`, `passwd`, `emailAddress`, `personalText`, `gender`, `birthdate`, `websiteTitle`, `websiteUrl`, `location`, `ICQ`, `AIM`, `YIM`, `MSN`, `hideEmail`, `showOnline`, `timeFormat`, `signature`, `timeOffset`, `avatar`, `pm_email_notify`, `karmaBad`, `karmaGood`, `usertitle`, `notifyAnnouncements`, `notifyOnce`, `notifySendBody`, `notifyTypes`, `memberIP`, `memberIP2`, `secretQuestion`, `secretAnswer`, `ID_THEME`, `is_activated`, `validation_code`, `ID_MSG_LAST_VISIT`, `additionalGroups`, `smileySet`, `ID_POST_GROUP`, `totalTimeLoggedIn`, `passwordSalt`, `steamid`, `bans_num`, `bans_cur`, `bans_banner`, `bans_reason`, `aeva_items`, `aeva_comments`, `aeva_unseen`, `aeva`) VALUES
-(8329, 'Thomaz', 1282982426, 0, 4, '', 0, 'Thomaz', 0, 0, '', '', '', 'c8db19963074a8563bd124b62a44c5c187966175', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '83.108.0.152:27132', '83.108.0.152:27132', '', '', 6, 1, '', 0, '', '', 4, 0, '6ddf', 'STEAM_0:0:25347701', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8333, 'steve', 1283017344, 3, 20, '', 1283541200, '[ANG] doctor who', 0, 0, '', '', '', 'dafe90f863ead181ab24558b54c80ec5c4bd9c34', 'stargatesgcrocks@hotmail.com', '', 1, '1988-09-17', '', '', 'USA', '', '', '', '', 1, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '96.13.124.71', '96.13.124.71', '', '', 6, 1, '10ba75852a', 4628, '', '', 0, 18606, 'ccf9', 'STEAM_0:1:8653418', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8365, 'Joe', 1283527266, 0, 4, '', 0, 'Â»fÎ¼á¹‰â„¢Â«.Ghost Of Sparta', 0, 0, '', '', '', '7f72382704fad74265eaf8c39ad856a69bf48ae9', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '82.5.19.30:27005', '82.5.19.30:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '0209', 'STEAM_0:1:31635184', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8332, 'Rawruss', 1282991828, 6, 2, '', 1283272025, '||VM:RP|| Rawruss', 0, 0, '', '', '', '2e841468fde16087709a0ed02408a919104b91cf', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '92.28.129.140', '92.28.129.140', '', '', 6, 1, '', 4620, '', '', 0, 4449, '5e79', 'STEAM_0:1:24168310', 0000000001, 1283289650, 0000008332, 'Banned for 1 hour', 0, 0, -1, ''),
-(1, 'Administrator', 0, 0, 1, '', 1282908774, 'Administrator - D3luX', 0, 0, '', '', '', 'aee06eb0010ce8dc7326fcce741de932f3a66854', 'deluxservers@live.dk', '', 0, '0001-01-01', '', '', '', '', '', '', '', 1, 1, '', '', 0, '', 0, 0, 0, '', 1, 1, 0, 2, '87.51.145.198', '87.51.145.198', '', '', 0, 1, 'eaf66def28', 4553, '', '', 0, 4871, 'd6da', '', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8331, 'Devil', 1282986657, 1, 0, '', 1283087020, '[ANG] Devil', 0, 0, '', '', '', '77f8f64267b8d28b8a879393c7a28226a1970686', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '86.171.100.197', '86.171.100.197', '', '', 6, 1, '', 4570, '', '', 0, 522, '8894', 'STEAM_0:1:6796526', 0000000001, 1283027059, 0000008319, 'Random Deathmatch - Read Rules', 0, 0, -1, ''),
-(8319, 'D3luX', 1282908280, 5028, 1, '', 1283546145, 'AN-G | D3luX', 0, 0, '', '', '', '6f8c43139587a6f1a3e24686bd13910cb2873495', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '87.51.145.198', '87.51.145.198', '', '', 6, 1, '', 4630, '1', '', 0, 42084, '7843', 'STEAM_0:0:28425458', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8330, 'shaneman', 1282985862, 1, 1, '', 1283545819, '[ANG] Shaneman [FB]', 0, 0, '', '', '', 'c76ef88989ea0ab372f0acacaaee9b0301123d8d', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '80.5.13.182', '80.5.13.182', '', '', 6, 1, '', 4635, '', '', 0, 4278, '1ee0', 'STEAM_0:0:19682008', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8343, 'Nexzer', 1283085307, 0, 4, '', 0, 'Nexzer', 0, 0, '', '', '', '1cb520c76fe7c612191f9abb7025e20fe6294c7d', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '212.10.63.152:27005', '212.10.63.152:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'd081', 'STEAM_0:1:9750737', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8334, 'Lotus', 1283025409, 5, 4, '', 1283537393, ')Ì²Ì…Î¶Î¦Å¤UÚ³', 0, 0, '', '', '', 'b7fbab78bc90869870f4ce0be6469f64f6602905', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '63.248.136.30', '63.248.136.30', '', '', 6, 1, '', 4633, '', '', 0, 4732, 'c743', 'STEAM_0:0:21459978', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8335, 'Jonas', 1283027723, 0, 4, '', 0, 'Jonas', 0, 0, '', '', '', 'ee20f6ae0d16c1e00e5be5728ccb542f31729f7c', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '85.80.175.196:11718', '85.80.175.196:11718', '', '', 6, 1, '', 0, '', '', 4, 0, 'a1f1', 'STEAM_0:1:26414270', 0000000001, 1283114167, 0000002224, 'Cheats detected.', 0, 0, -1, ''),
-(8336, 'ruben1004', 1283027877, 0, 4, '', 0, 'CL4P-TARP', 0, 0, '', '', '', '9f272a867d8ac8b7f2e33acf91ca18702086de75', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '84.82.27.198:56304', '84.82.27.198:56304', '', '', 6, 1, '', 0, '', '', 4, 0, 'b51c', 'STEAM_0:0:14187204', 0000000001, 1283114322, 0000002224, 'Cheats detected.', 0, 0, -1, ''),
-(8337, 'b2ball6playa2', 1283029204, 0, 4, '', 0, 'shakenbake', 0, 0, '', '', '', '272dd08bc7cfc25ab5dd1387f31c5fcba8a369b3', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '24.151.21.190:27005', '24.151.21.190:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'c94a', 'STEAM_0:1:15821594', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8338, 'AndreAs', 1283030111, 0, 4, '', 0, 'AndreAs', 0, 0, '', '', '', 'aeb1c51ec237371ac1e07f2f33cf29091c53d8c4', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '83.93.108.125:27005', '83.93.108.125:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '1f40', 'STEAM_0:1:16429565', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8339, 'MooMooViking', 1283034873, 0, 4, '', 0, 'Moo Moo Viking', 0, 0, '', '', '', '638ce78b8a69909df66a7492dc265aabb8dfc084', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '194.144.114.243:20306', '194.144.114.243:20306', '', '', 6, 1, '', 0, '', '', 4, 0, 'd841', 'STEAM_0:0:28223790', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8340, 'Sandman', 1283039983, 0, 4, '', 0, 'Sandman', 0, 0, '', '', '', '3d18d9ab3f1fb3b8cf4bedd05a79d9397f105ece', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '92.45.189.126:27005', '92.45.189.126:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'b56f', 'STEAM_0:1:15501416', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8341, 'Yomankeenan', 1283041392, 9, 4, '', 1283545919, '^0VerQu ^1Yomankeenan', 0, 0, '', '', '', '5085796847c8c93e509f9e0029b14cc67ecd99df', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '190.241.61.128', '190.241.61.128', '', '', 6, 1, '', 4635, '', '', 0, 3769, 'f79f', 'STEAM_0:0:18463428', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8342, 'SoulReaper', 1283081771, 0, 4, '', 0, 'Soul Reaper', 0, 0, '', '', '', 'b4c429dcf8b7a75d21aad99a07a64520fb63d8b0', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '184.202.198.210:27005', '184.202.198.210:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '12de', 'STEAM_0:0:18368505', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8344, 'Maxen', 1283088669, 0, 4, '', 1283099184, 'SG| Maxen', 0, 0, '', '', '', 'e6b832db2639c6ba81c4a3b5d4f8f5c77cab35ed', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '87.59.102.186', '87.59.102.186', '', '', 6, 1, '', 4579, '', '', 4, 542, '6332', 'STEAM_0:0:21411593', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8345, 'Matt', 1283090739, 0, 4, '', 0, 'Or-Gaming|Matt.W|UK', 0, 0, '', '', '', 'aa3584b99a33a3cbc826d814832a72e3e6969c79', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '87.57.53.38:27005', '87.57.53.38:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '8c0e', 'STEAM_0:1:16766957', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8346, 'Cybbie', 1283093500, 9, 2, '', 1283368574, 'AN-G | Mr.CyberPunkZ', 0, 0, '', '', '', '7a1a0c29bae20fce1dfe1289b55d25f6546c2853', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', 'AN-Gaming!', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '213.119.215.102', '213.119.215.102', 'Mom', '153c85c8e79935c59b3c0c51ae886947', 6, 1, '', 4627, '', '', 0, 5074, 'c101', 'STEAM_0:1:31430158', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8347, 'TDCMazZ', 1283093707, 0, 4, '', 1283359498, 'MazZ', 0, 0, '', '', '', '556d0eb07d28a70656e7ac92db170de9d517bb93', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '84.197.50.54', '84.197.50.54', '', '', 6, 1, '', 4627, '', '', 4, 1522, '2202', 'STEAM_0:1:10594100', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8348, 'Jon', 1283094934, 0, 4, '', 0, 'Jon', 0, 0, '', '', '', '31904c5168d0ef7f486b29e182baf8f0993c53ff', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '77.99.136.218:27005', '77.99.136.218:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'ba02', 'STEAM_0:1:14928653', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8349, 'THEKILLER', 1283098643, 0, 4, '', 0, 'THE KILLER', 0, 0, '', '', '', 'd7f7affd281c8f93d1aabdf5ec7eb8c26ae03be0', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '188.114.140.132:27005', '188.114.140.132:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'e2e5', 'STEAM_0:0:26404346', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8361, 'OwnerTarget', 1283272069, 0, 0, '', 1283275049, 'OwnerTarget', 0, 0, '', '', '', 'ef264040604ca7c1222786867a46f66a76ce8250', 'lawl@lawl.dk', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '87.59.195.206', '87.59.195.206', '', '', 0, 1, '', 4624, '', '', 4, 0, '53cd', '', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8350, 'CowsGoMoo', 1283113151, 0, 4, '', 0, '[FH]CowsGoMoo-{TDC}-', 0, 0, '', '', '', 'd95311c2e05c4ec5e750a9778e655b600e38093b', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '213.107.94.46:20004', '213.107.94.46:20004', '', '', 6, 1, '', 0, '', '', 4, 0, 'b1f1', 'STEAM_0:1:15534037', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8351, 'Ryan', 1283128842, 0, 4, '', 0, 'Ryan', 0, 0, '', '', '', '9a85106083f7ba8595cfab55f40d03d6f3cd77af', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '68.5.10.184:27005', '68.5.10.184:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '18f9', 'STEAM_0:1:15594979', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8354, 'zacman37', 1283206229, 0, 4, '', 0, '[tsgt] zacman37', 0, 0, '', '', '', '5414ec28cde6a3606bbb22d2eff3d6a02794e2ed', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '69.137.144.218:27005', '69.137.144.218:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'fd33', 'STEAM_0:0:23337700', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8353, 'PureOrange', 1283187932, 0, 4, '', 0, 'Pure Orange', 0, 0, '', '', '', 'ae954db17b78bb9a9ecfa2bb81e24684002ad1d2', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '83.163.153.227:27005', '83.163.153.227:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '8a3e', 'STEAM_0:1:5638935', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8355, 'kphail', 1283207238, 0, 4, '', 0, '.:Linkin Monroe:.', 0, 0, '', '', '', '211c43fe7e00eab01842b2f7b82fab36f0a47fa8', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '209.6.21.247:27005', '209.6.21.247:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '9838', 'STEAM_0:1:17856033', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8356, 'Coffeestain', 1283208027, 0, 4, '', 0, '420 Criminal Mischief', 0, 0, '', '', '', '6fe04d7e74bfb832123a94aa0ad37c81e16a4433', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '86.147.182.36:50743', '86.147.182.36:50743', '', '', 6, 1, '', 0, '', '', 4, 0, 'f8a2', 'STEAM_0:0:17591530', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8357, 'Death', 1283214163, 0, 4, '', 0, 'SpyCrabz |>( o o )<|', 0, 0, '', '', '', 'cf0b87fecd75c794f9610900d6acdaae666ca61d', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '173.180.63.31:60458', '173.180.63.31:60458', '', '', 6, 1, '', 0, '', '', 4, 0, '56e5', 'STEAM_0:1:4957997', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8363, 'BullsEye', 1283358479, 0, 4, '', 1283359236, 'BullsEye', 0, 0, '', '', '', '97165734609153949c162a6bc499f3b8cb1b045f', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '80.47.230.184', '80.47.230.184', '', '', 6, 1, '', 4627, '', '', 4, 361, '745c', 'STEAM_0:0:21039608', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8358, 'Bossie', 1283259245, 0, 4, '', 0, 'Bossie', 0, 0, '', '', '', '2ad2141ecd1380cd5399b28d6781c84256b30c49', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '91.181.4.37:27005', '91.181.4.37:27005', '', '', 6, 1, '', 0, '', '', 4, 0, 'd1fd', 'STEAM_0:0:29288114', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8359, 'Rocki', 1283259272, 0, 4, '', 0, '^3[TEG]^6Rocki', 0, 0, '', '', '', 'd38fb32de8d1c0b64e1ae4d6995bf643f7d7eafc', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '94.101.214.157:27005', '94.101.214.157:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '1544', 'STEAM_0:0:17965782', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8360, 'Frozen', 1283259574, 0, 4, '', 1283261577, '-)BDB(- à¹–ÛœTheFrozen', 0, 0, '', '', '', '0003964d90d117801df5af7c01f1e86f523ed276', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '84.195.54.57', '84.195.54.57', '', '', 6, 1, '', 4620, '', '', 4, 1222, '70c1', 'STEAM_0:1:2110129', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8362, 'LittleDancingFeet', 1283295334, 0, 4, '', 0, 'Little Dancing Feet', 0, 0, '', '', '', '2961e39f3231ba41b0b178f88c4116734dec5429', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '24.181.231.17:27005', '24.181.231.17:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '1c21', 'STEAM_0:0:13393889', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8364, 'RobbieGT', 1283360881, 0, 4, '', 0, 'RobbieGT', 0, 0, '', '', '', 'be7c41258abe790134192b7618088c6ff967961b', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '76.118.100.61:27005', '76.118.100.61:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '2cfb', 'STEAM_0:1:26647117', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, ''),
-(8366, 'kazanbaz', 1283527360, 0, 4, '', 0, 'ZERO G', 0, 0, '', '', '', '45653e83da7ca8d6fd789eaa6ae789b6dda0f37b', 'notavailable@gmail.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 0, 1, '', '', 0, '', 1, 0, 0, '', 1, 1, 0, 2, '77.97.169.180:27005', '77.97.169.180:27005', '', '', 6, 1, '', 0, '', '', 4, 0, '380a', 'STEAM_0:0:29146169', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, '');
+(1, 'Administrator', 0, 0, 1, '', 1282908774, 'Administrator - SkyWalker', 0, 0, '', '', '', 'aee06eb0010ce8dc7326fcce741de932f3a66854', 'michael3200@me.com', '', 0, '0001-01-01', '', '', '', '', '', '', '', 1, 1, '', '', 0, '', 0, 0, 0, '', 1, 1, 0, 2, '87.51.145.198', '87.51.145.198', '', '', 0, 1, 'eaf66def28', 4553, '', '', 0, 4871, 'd6da', 'STEAM_0:1:12383152', 0000000000, 0000000001, 0000000000, '', 0, 0, -1, '');
 
 -- --------------------------------------------------------
 
@@ -15841,6 +15984,18 @@ INSERT INTO `smf_tp_variables` (`id`, `value1`, `value2`, `value3`, `type`, `val
 --
 
 --
+-- Indexes for table `perp_bname`
+--
+ALTER TABLE `perp_bname`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `perp_fuel`
+--
+ALTER TABLE `perp_fuel`
+  ADD PRIMARY KEY (`uid`);
+
+--
 -- Indexes for table `perp_organization`
 --
 ALTER TABLE `perp_organization`
@@ -15856,7 +16011,37 @@ ALTER TABLE `perp_system`
 -- Indexes for table `perp_users`
 --
 ALTER TABLE `perp_users`
-  ADD PRIMARY KEY (`uid`,`id`,`steamid`(15));
+  ADD PRIMARY KEY (`uid`,`id`(15),`steamid`(15));
+
+--
+-- Indexes for table `serverguard_analytics`
+--
+ALTER TABLE `serverguard_analytics`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `serverguard_bans`
+--
+ALTER TABLE `serverguard_bans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `serverguard_ranks`
+--
+ALTER TABLE `serverguard_ranks`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `serverguard_reports`
+--
+ALTER TABLE `serverguard_reports`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `serverguard_users`
+--
+ALTER TABLE `serverguard_users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `smf_aeva_albums`
@@ -16285,10 +16470,40 @@ ALTER TABLE `smf_tp_variables`
 --
 
 --
+-- AUTO_INCREMENT for table `perp_bname`
+--
+ALTER TABLE `perp_bname`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `perp_organization`
 --
 ALTER TABLE `perp_organization`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+--
+-- AUTO_INCREMENT for table `serverguard_analytics`
+--
+ALTER TABLE `serverguard_analytics`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `serverguard_bans`
+--
+ALTER TABLE `serverguard_bans`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `serverguard_ranks`
+--
+ALTER TABLE `serverguard_ranks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `serverguard_reports`
+--
+ALTER TABLE `serverguard_reports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `serverguard_users`
+--
+ALTER TABLE `serverguard_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `smf_aeva_albums`
 --
@@ -16378,7 +16593,7 @@ ALTER TABLE `smf_membergroups`
 -- AUTO_INCREMENT for table `smf_members`
 --
 ALTER TABLE `smf_members`
-  MODIFY `ID_MEMBER` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8367;
+  MODIFY `ID_MEMBER` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `smf_messages`
 --

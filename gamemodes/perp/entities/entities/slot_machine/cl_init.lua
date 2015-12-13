@@ -10,9 +10,9 @@ local ColorsTable = {"red", "blu", "sil", "gol"};
 local SpinTimes = {2.6410, 2.9713, 3.3902};
 local RotationsTable = {120, 265, 45, 335};
 
-local OurSound = Sound('perp/slots_play.mp3');
-local OurSound_Lose = Sound('perp/slots_lose.mp3');
-local OurSound_Win = Sound('perp/slots_win.mp3');
+local OurSound = Sound('perp3.0/slots_play.mp3');
+local OurSound_Lose = Sound('perp3.0/slots_lose.mp3');
+local OurSound_Win = Sound('perp3.0/slots_win.mp3');
 
 function ENT:Initialize()
 

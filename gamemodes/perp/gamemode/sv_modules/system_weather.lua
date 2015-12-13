@@ -1,15 +1,4 @@
-/////////////////////////////////////////
-// © 2011-2012 D3lux - D3lux-Gaming    //
-//    All rights reserved    		   //
-/////////////////////////////////////////
-// This material may not be  		   //
-//   reproduced, displayed,  		   //
-//  modified or distributed  		   //
-// without the express prior 		   //
-// written permission of the 		   //
-//   the copyright holder.  		   //
-//		D3lux-Gaming.com   			   //
-/////////////////////////////////////////
+
 
 local tornadoSpawns = 	{
 							Vector(-3554.9829, -652.1917, 64.0000), // Exchange
@@ -345,7 +334,7 @@ local SEASON_WEATHER_PROB = {
 												},
 											},
 							};
-
+/*
 AVERAGE_TEMPERATURES = {
 								{20, 41},
 								{24, 46},
@@ -360,10 +349,27 @@ AVERAGE_TEMPERATURES = {
 								{32, 54},
 								{23, 43}
 							  };
+*/
+
+//fuck snow for now
+AVERAGE_TEMPERATURES = {
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87},
+								{64, 87}
+							  };
 							  
 local TRUE_TEMPERATURES = {};
 
-GM.CurrentTemperature = 30;
+GM.CurrentTemperature = 70;
 GM.CloudCondition = CLOUDS_CLEAR;
 GM.NextCloudChange = DAY_LENGTH * .25;
 GM.NextTempChange = DAY_LENGTH / 24;
@@ -459,6 +465,7 @@ function GM.calculateWeather ( )
 	
 	if (!GAMEMODE.NextCloudCondition) then
 		local rand = math.random(1, 100);
+        local ourTable = {};
 		local ourTable = SEASON_WEATHER_PROB[SEASON_TO_STRING[CurrentSeason]][CLOUD_CONDITION_TO_STRING[GAMEMODE.CloudCondition]];
 		
 		for k, v in pairs(ourTable) do
@@ -474,26 +481,26 @@ function GM.calculateWeather ( )
 	end
 	
 	// Temperature
-	if (GAMEMODE.NextTempChange <= 0) then
-		local ourTable = SEASON_TEMP_CLOUDS[SEASON_TO_STRING[CurrentSeason]][CLOUD_CONDITION_TO_STRING[GAMEMODE.CloudCondition]];
-		
-		if (GAMEMODE.CurrentTime < DAWN_START || GAMEMODE.CurrentTime > DUSK_START) then
-			ourTable = ourTable[2];
-		else
-			ourTable = ourTable[1];
-		end
-		
-		local tempChange = math.random(ourTable[1], ourTable[2]);
-		
-		local trueTempChange = math.random(20, 50) * .01 * tempChange;
-		GAMEMODE.CurrentTemperature = math.Clamp(GAMEMODE.CurrentTemperature + trueTempChange, TRUE_TEMPERATURES[GAMEMODE.CurrentMonth][GAMEMODE.CurrentDay][1], TRUE_TEMPERATURES[GAMEMODE.CurrentMonth][GAMEMODE.CurrentDay][2]);
-		
-		SetGlobalInt("temp", GAMEMODE.CurrentTemperature);
-		Msg("Temperature changed to " .. GAMEMODE.CurrentTemperature .. ". ( Change: " .. trueTempChange .. " )\n");
-	
-		GAMEMODE.NextTempChange = DAY_LENGTH / math.random(30, 60);
-	end
-	GAMEMODE.NextTempChange = GAMEMODE.NextTempChange - .5;
+	//if (GAMEMODE.NextTempChange <= 0) then
+	//	local ourTable = SEASON_TEMP_CLOUDS[SEASON_TO_STRING[CurrentSeason]][CLOUD_CONDITION_TO_STRING[GAMEMODE.CloudCondition]];
+	//	
+	//	if (GAMEMODE.CurrentTime < DAWN_START || GAMEMODE.CurrentTime > DUSK_START) then
+	//		ourTable = ourTable[2];
+	//	else
+	//		ourTable = ourTable[1];
+	//	end
+	//	
+	//	local tempChange = math.random(ourTable[1], ourTable[2]);
+	//	
+	//	local trueTempChange = math.random(20, 50) * .01 * tempChange;
+	//	GAMEMODE.CurrentTemperature = math.Clamp(GAMEMODE.CurrentTemperature + trueTempChange, TRUE_TEMPERATURES[GAMEMODE.CurrentMonth][GAMEMODE.CurrentDay][1], TRUE_TEMPERATURES[GAMEMODE.CurrentMonth][GAMEMODE.CurrentDay][2]);
+	//	
+	//	SetGlobalInt("temp", GAMEMODE.CurrentTemperature);
+	//	Msg("Temperature changed to " .. GAMEMODE.CurrentTemperature .. ". ( Change: " .. trueTempChange .. " )\n");
+	//
+	//	GAMEMODE.NextTempChange = DAY_LENGTH / math.random(30, 60);
+	//end
+	//GAMEMODE.NextTempChange = GAMEMODE.NextTempChange - .5;
 end
 
 GM.MinSkyAlpha = 0

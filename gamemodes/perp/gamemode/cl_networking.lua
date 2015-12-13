@@ -58,7 +58,7 @@ end
 usermessage.Hook("perp_umsg_f", fakeUMS);
 
 function GM.GetPrivateString ( UMsg )
-	local Entity = LocalPlayer()
+	local Entity = LocalPlayer();
 	local ID = UMsg:ReadString();
 	local Type = UMsg:ReadShort();
 	

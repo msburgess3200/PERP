@@ -1,11 +1,10 @@
-require('tmysql');
-
 local function sendOnline ( )
 	if (GAMEMODE.ServerIdentifier == 0) then return end
 	
 	tmysql.query("UPDATE `perp_system` SET `value`='" .. os.time() .. "' WHERE `key`='online_" .. GAMEMODE.ServerIdentifier .. "' LIMIT 1");
 end
 timer.Create("sendOnline", 10, 0, sendOnline);
+
 
 local function forceOnline ( Player )
 	if (Player && IsValid(Player) && !Player:IsSuperAdmin()) then return end
@@ -31,9 +30,9 @@ function GM:KeyPress ( Player, Key )
 	end
 end
 
-function GM:Initialize ( )
-	Msg("Loading tmysql module... ");
-	
+function GM:Initialize ( )    
+    Msg("Loading tmysql module... ");
+	require('tmysql');
 	
 	if (tmysql) then
 		Msg("done!\n");
@@ -41,23 +40,23 @@ function GM:Initialize ( )
 		Msg("failed!\n");
 	end
 	
-	self.ServerIdentifier = 2;
+	self.ServerIdentifier = 1;
 	self.ServerDateIdentifier = 1;
 	self.numPlayers = 128;
 	self.ReservedSlots = 64;
 	self.Serious = true;
 	
-    SQL_INFO_1 = "localhost"; -- DB-HOST
-	SQL_INFO_2 = ""; -- DB-User
-	SQL_INFO_3 = "";  -- DB-Pass
-	SQL_INFO_4 = ""; -- DB-DBName
+    SQL_INFO_1 = "localhost"; -- HOST
+	SQL_INFO_2 = "gmod_perp"; -- Username
+	SQL_INFO_3 = "Doggie14";  -- Password
+	SQL_INFO_4 = "gmod_perp"; -- Database Name
 
-	tmysql.initialize(SQL_INFO_1, SQL_INFO_2, SQL_INFO_3, SQL_INFO_4, 3306, 8, 8);
-
+	tmysql.initialize(SQL_INFO_1, SQL_INFO_2, SQL_INFO_3, SQL_INFO_4, 3306);
+    
 	RunConsoleCommand("sv_visiblemaxplayers", self.numPlayers-self.ReservedSlots);
 	
 	timer.Simple(1, function ( )
-		RunConsoleCommand("sv_allowdownload", "1");
+		RunConsoleCommand("sv_allowdownload", "0");
 		RunConsoleCommand("sv_allowupload", "1");
 		RunConsoleCommand("sv_usermessage_maxsize", "5000");
 		RunConsoleCommand('lua_log_sv', '1');
@@ -116,6 +115,7 @@ function GM:PlayerInitialSpawn ( Player )
 	Player:ConCommand("cl_playerspraydisable 1")
 	self.PushNumPlayers();
 	timer.Simple(5, GAMEMODE.SendJobInformation, Player)
+	--RunConsoleCommand("perp_a_fr", Player:UniqueID());
 end
 
 function GM:PlayerConnect ( )

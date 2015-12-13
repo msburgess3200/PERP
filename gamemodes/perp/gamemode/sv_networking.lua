@@ -1,5 +1,3 @@
-	require('tmysql');
-
 local function PlayerSave ( ply )
 	if (!IsValid(ply)) then
 		return;
@@ -17,12 +15,12 @@ function GM.LoadPlayerProfile ( Player )
 	Player.SMFID = Player:SteamID()
 	Player.Buddies = Player.Buddies or {}
 	
-	Msg("Loading " .. Player:Nick() .. "...\n");
+	--Msg("Loading " .. Player:Nick() .. "...\n");
 	
 	if (!Player.StartedSendingVars) then
 		Player.StartedSendingVars = true;
 	
-		Msg("Starting var transfer to " .. Player:Nick() .. "...\n");
+		--Msg("Starting var transfer to " .. Player:Nick() .. "...\n");
 		local curNum = 5;
 		for _, p in pairs(player.GetAll()) do
 			if (p != Player && p.StringRedun) then
@@ -52,8 +50,9 @@ function GM.LoadPlayerProfile ( Player )
 		if (!Player || !Player:IsValid() || !IsValid(Player)) then return end
 	
 		if (!PlayerInfo || !PlayerInfo[1]) then
-			tmysql.query("INSERT INTO `perp_users` (`id`, `uid`, `steamid`, `rp_name_first`, `rp_name_last`, `time_played`, `cash`, `model`, `items`, `skills`, `genes`, `formulas`, `organization`, `bank`, `vehicles`, `ringtones`, `ringtone`, `last_played`) VALUES ('" .. Player.SMFID .. "', '" .. Player:UniqueID() .. "', '" .. Player:SteamID() .. "', 'John', 'Doe', '5', '15000', '', '', '', '5', '', '0', '0', '', '', '1', '0')", function (...)
-			PrintTable({...})
+			--PrintTable({...})
+			-- tmysql.query("INSERT INTO `perp_users` (`id`, `uid`, `steamid`, `rp_name_first`, `rp_name_last`, `time_played`, `cash`, `model`, `items`, `skills`, `genes`, `formulas`, `organization`, `bank`, `vehicles`, `ringtones`, `ringtone`, `last_played`, `blacklists`) VALUES ('" .. Player.SMFID .. "', '" .. Player:UniqueID() .. "', '" .. Player:SteamID() .. "', 'John', 'Doe', '5', '15000', '', '', '', '5', '', '0', '0', '', '', '1', '0', '')", function (...)
+			tmysql.query("INSERT INTO `perp_users` (`uid`, `id`, `steamid`, `blacklists`, `rp_name_first`, `rp_name_last`, `time_played`, `cash`, `model`, `items`, `storage`, `skills`, `genes`, `formulas`, `organization`, `bank`, `vehicles`, `ringtones`, `ammo_pistol`, `ammo_rifle`, `ammo_shotgun`, `ringtone`, `last_played`, `fuelleft`, `lastcar`, `ticket`) VALUES ('" .. Player:UniqueID() .. "',         '" .. Player.SMFID .. "',         '" .. Player:SteamID() .. "',         '',         'John',         'Doe',         '0',         '0',         '',         '',         '',         '',         '',         '',         '0',         '0',         '',         '',         '00000000000',         '00000000000',         '00000000000',         '1',         '0',         '10000',         NULL,         NULL);", function (...)
 			tmysql.query("INSERT INTO `perp_fuel` (`uid`) VALUES ('" .. Player:UniqueID() .. "')");
 				if (!Player || !Player:IsValid() || !IsValid(Player)) then return end
 				

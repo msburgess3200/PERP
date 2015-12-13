@@ -37,7 +37,7 @@ function PANEL:Init()
 	self.Hostname:SetText( GetHostName() )
 	
 	self.Description = vgui.Create( "DLabel", self )
-	self.Description:SetText( "CTSGaming.com | Roleplay" )
+	self.Description:SetText( "PERP - CTSGaming.com" )
 	
 	self.PlayerFrame = vgui.Create( "PlayerFrame", self )
 	
