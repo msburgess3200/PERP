@@ -1,5 +1,5 @@
 
-
+-[[
 Msg("Loading pimpmyride module... ");
 require('pimpmyride');
 
@@ -43,4 +43,4 @@ local function handleCarWheelMaterials ( )
 	end
 end
 hook.Add("Think", "handleCarWheelMaterials", handleCarWheelMaterials);
-
+-]]
