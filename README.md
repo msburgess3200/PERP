@@ -8,6 +8,7 @@ SkyWalker's version of PERP. Updated constantly.
             * Fixed Query SELECT.
     * Removed Backdoors
     * Fixed Weather spamming issue.
+    * Fixed Car Weather spamming issue.
     
 # ToDo's
-    * Fix Car Weather Spam Error
+    * Fix Cars crashing server when the handbreak is used(space bar)
